@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Codehaks.Pagination/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Razor": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Codehaks.Pagination.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Codehaks.Pagination.dll": {}
+        }
+      },
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -40,6 +52,30 @@
       },
       "MessagePackAnalyzer/2.1.152": {
         "type": "package"
+      },
+      "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Razor/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Html.Abstractions": "2.2.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll": {}
+        }
       },
       "Microsoft.AspNetCore.Razor.Language/6.0.0": {
         "type": "package",
@@ -3196,6 +3232,18 @@
     }
   },
   "libraries": {
+    "Codehaks.Pagination/1.0.0": {
+      "sha512": "SOYDxYyYztJfZ1LvmTcl+uV1MRfQlssfFXBf14VQd0tlvz+mEeCE1wlPjMrssI0XdTBMQi1I0UrhPMI5JDuXjg==",
+      "type": "package",
+      "path": "codehaks.pagination/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "codehaks.pagination.1.0.0.nupkg.sha512",
+        "codehaks.pagination.nuspec",
+        "lib/netstandard2.0/Codehaks.Pagination.dll"
+      ]
+    },
     "Humanizer.Core/2.8.26": {
       "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
       "type": "package",
@@ -3256,6 +3304,32 @@
         "messagepackanalyzer.nuspec",
         "tools/install.ps1",
         "tools/uninstall.ps1"
+      ]
+    },
+    "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
+      "sha512": "Y4rs5aMEXY8G7wJo5S3EEt6ltqyOTr/qOeZzfn+hw/fuQj5GppGckMY5psGLETo1U9hcT5MmAhaT5xtusM1b5g==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.html.abstractions/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Html.Abstractions.xml",
+        "microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.html.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Razor/2.2.0": {
+      "sha512": "V54PIyDCFl8COnTp9gezNHpUNHk7F9UnerGeZy3UfbnwYvfzbo+ipqQmSgeoESH8e0JvKhRTyQyZquW2EPtCmg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.razor/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Razor.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Razor.xml",
+        "microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
+        "microsoft.aspnetcore.razor.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Razor.Language/6.0.0": {
@@ -9775,6 +9849,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Codehaks.Pagination >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.1",
       "Microsoft.EntityFrameworkCore.SQLite >= 6.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.1",
@@ -9787,11 +9862,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\LearnASP.NET\\MarketMasked\\MarketMasked.csproj",
+      "projectUniqueName": "d:\\Project\\LearnASP.NET\\MarketMasked\\MarketMasked.csproj",
       "projectName": "MarketMasked",
-      "projectPath": "D:\\Project\\LearnASP.NET\\MarketMasked\\MarketMasked.csproj",
+      "projectPath": "d:\\Project\\LearnASP.NET\\MarketMasked\\MarketMasked.csproj",
       "packagesPath": "C:\\Users\\fahranfahri\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\LearnASP.NET\\MarketMasked\\obj\\",
+      "outputPath": "d:\\Project\\LearnASP.NET\\MarketMasked\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\fahranfahri\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -9820,6 +9895,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Codehaks.Pagination": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",

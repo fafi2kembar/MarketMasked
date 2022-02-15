@@ -1,13 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "zTXv4NsPnUHzc5H5YvGjiqlDlwCWZDJy20K1g4bfKRE9/mCRF0c2BXEO1vVyXFoxAJ5l7ewF4IVtXB20UntGiw==",
+  "dgSpecHash": "OrfFeSSDQzPQXT06O/Jgc7dQ/fmoUX/tShiBkxZpmTr6UMPwJwSolhbNjb+JS1iM/7kAQSKVKXINsVxlHa+GYg==",
   "success": true,
   "projectFilePath": "D:\\Project\\LearnASP.NET\\MarketMasked\\MarketMasked.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\fahranfahri\\.nuget\\packages\\codehaks.pagination\\1.0.0\\codehaks.pagination.1.0.0.nupkg.sha512",
     "C:\\Users\\fahranfahri\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\fahranfahri\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\fahranfahri\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\fahranfahri\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
+    "C:\\Users\\fahranfahri\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\fahranfahri\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\fahranfahri\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
     "C:\\Users\\fahranfahri\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\fahranfahri\\.nuget\\packages\\microsoft.build\\17.0.0\\microsoft.build.17.0.0.nupkg.sha512",

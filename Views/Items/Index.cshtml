@@ -6,11 +6,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
-<h1>Index</h1>
+<h1 align="center">List Market</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create"><img src="css/image/plus.svg" alt="add" width="32" height="32"></a>
 </p>
+<div class="divscroll">
 <table class="table">
     <thead>
         <tr>
@@ -22,6 +23,12 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageName)
+            </th>
+            <th>
+                Uploaded File
             </th>
             <th></th>
         </tr>
@@ -39,11 +46,18 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                @Html.DisplayFor(modelItem => item.ImageName)
+            </td>
+            <td align="center">
+                <img src="@("~/image/"+item.ImageName)" asp-append-version="true" width="100px" height="100px"/>
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id"><img src="css/image/pen-fill.svg" alt="edit" width="16" height="16"></a> |
+                <a asp-action="Details" asp-route-id="@item.Id"><img src="css/image/archive-fill.svg" alt="detail" width="16" height="16"></a> |
+                <a asp-action="Delete" asp-route-id="@item.Id"><img src="css/image/trash-fill.svg" alt="delete" width="16" height="16"></a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+</div>

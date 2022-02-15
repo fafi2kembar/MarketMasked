@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MarketMasked.Models;
+using Microsoft.AspNetCore.Hosting;
 
 namespace MarketMasked.Controllers
 {
@@ -14,9 +15,12 @@ namespace MarketMasked.Controllers
     {
         private readonly MarketMaskedContext _context;
 
-        public ItemsController(MarketMaskedContext context)
+        private readonly IWebHostEnvironment _hostEnvironment;
+
+        public ItemsController(MarketMaskedContext context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
+            this._hostEnvironment = hostEnvironment;
         }
 
         // GET: Items
@@ -54,13 +58,25 @@ namespace MarketMasked.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,Price")] Item item)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,Price,ImageFile")] Item item)
         {
             if (ModelState.IsValid)
             {
+                //Save image to wwwroot/image
+                string wwwRootPath = _hostEnvironment.WebRootPath;
+                string fileName = Path.GetFileNameWithoutExtension(item.ImageFile.FileName);
+                string extension = Path.GetExtension(item.ImageFile.FileName);
+                item.ImageName=fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                string path = Path.Combine(wwwRootPath + "/Image/", fileName);
+                using (var fileStream = new FileStream(path,FileMode.Create))
+                {
+                    await item.ImageFile.CopyToAsync(fileStream);
+                }
+
                 _context.Add(item);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+            
             }
             return View(item);
         }
@@ -86,7 +102,7 @@ namespace MarketMasked.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Price")] Item item)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Price,ImageName")] Item item)
         {
             if (id != item.Id)
             {
@@ -140,6 +156,11 @@ namespace MarketMasked.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var item = await _context.Item.FindAsync(id);
+            //delete image from wwwroot/image
+            var imagePath = Path.Combine(_hostEnvironment.WebRootPath,"image",item.ImageName);
+            if (System.IO.File.Exists(imagePath))
+            System.IO.File.Delete(imagePath);
+            //delete the record
             _context.Item.Remove(item);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

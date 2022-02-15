@@ -12050,6 +12050,80 @@
         }
       },
       {
+        "HashCode": 467356670,
+        "Kind": "ITagHelper",
+        "Name": "Codehaks.Pagination.PaginationTagHelper",
+        "AssemblyName": "Codehaks.Pagination",
+        "CaseSensitive": false,
+        "TagMatchingRules": [
+          {
+            "TagName": "pagination"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "ITagHelper",
+            "Name": "page-number",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "PageNumber"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "page-size",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "PageSize"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "page-count",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "PageCount"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "page-range",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "PageRange"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "page-first",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "PageFirst"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "page-last",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "PageLast"
+            }
+          },
+          {
+            "Kind": "ITagHelper",
+            "Name": "page-target",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "PageTarget"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "ITagHelper",
+          "Common.TypeName": "Codehaks.Pagination.PaginationTagHelper"
+        }
+      },
+      {
         "HashCode": -1132855933,
         "Kind": "ITagHelper",
         "Name": "Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper",

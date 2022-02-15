@@ -118,3 +118,57 @@ body {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+
+table {
+	width: 800px;
+  overflow:scroll;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,td {
+	padding: 15px;
+	background-color: rgba(17, 42, 187, 0.521);
+	color: rgb(255, 255, 255);
+}
+
+th {
+	text-align: left;
+}
+
+thead {
+		background-color: #5ab2db79;
+	}
+
+tbody tr:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+td:hover {
+				content: "";
+				background-color: rgba(16, 26, 122, 0.24);
+				z-index: -1;
+}
+.divscroll {
+  overflow-y:scroll;
+  height:450px;
+  scrollbar-color: rgba(10, 168, 241, 0.445) rgba(255, 255, 255, 0.651);
+  scrollbar-shadow-color: #717171;
+}
+.divscroll::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  border-radius: 10px;
+}
+.divscroll::-webkit-scrollbar-track {
+  border: 1px solid rgb(91, 222, 255);
+  border-radius: 10px;
+}
+.divscroll::-webkit-scrollbar-thumb {
+  background: rgb(57, 158, 218);
+  border-radius: 10px;
+}
+.divscroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(57, 159, 218, 0.548);
+}
