@@ -9,7 +9,7 @@
 <h1 class="h1list" align="center">List Market</h1>
 <hr>
 <p>
-    <a asp-action="Create"><img src="css/image/plus.svg" alt="add" width="32" height="32"></a>
+    <a class="button" asp-action="Create"><img src="css/image/plus.svg" alt="add" width="20" height="20">Create New</a>
 </p>
 <div class="divscroll">
 <table class="table">
@@ -22,13 +22,13 @@
             <td>
                 <img src="@("~/image/"+item.ImageName)" asp-append-version="true" width="100px" height="100px"/>
                 <br />
-                @Html.DisplayNameFor(model => model.Name) :
+                @Html.DisplayNameFor(model => model.Name)        :
                 @Html.DisplayFor(modelItem => item.Name)
                 <br />
                 @Html.DisplayNameFor(model => model.Description) :
                 @Html.DisplayFor(modelItem => item.Description)
                 <br />
-                @Html.DisplayNameFor(model => model.Price) : 
+                @Html.DisplayNameFor(model => model.Price)       : 
                 Rp.@Html.DisplayFor(modelItem => item.Price)
                 <br />
                 <a asp-action="Edit" asp-route-id="@item.Id"><img src="css/image/pen-fill.svg" alt="edit" width="16" height="16"></a> |
