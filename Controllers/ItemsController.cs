@@ -102,7 +102,7 @@ namespace MarketMasked.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Price,ImageName")] Item item)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Price,ImageFile")] Item item)
         {
             if (id != item.Id)
             {
@@ -113,6 +113,18 @@ namespace MarketMasked.Controllers
             {
                 try
                 {
+                     //Save image to wwwroot/image
+                    string wwwRootPath = _hostEnvironment.WebRootPath;
+                    string v = Path.GetFileNameWithoutExtension(item.ImageFile.FileName);
+                    string fileName = v;
+                    string extension = Path.GetExtension(item.ImageFile.FileName);
+                    item.ImageName=fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                    string path = Path.Combine(wwwRootPath + "/Image/", fileName);
+                    using (var fileStream = new FileStream(path,FileMode.Create))
+                    {
+                        await item.ImageFile.CopyToAsync(fileStream);
+                    }
+
                     _context.Update(item);
                     await _context.SaveChangesAsync();
                 }
