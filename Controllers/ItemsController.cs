@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MarketMasked.Models;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Builder;
 
 namespace MarketMasked.Controllers
 {
@@ -24,9 +27,17 @@ namespace MarketMasked.Controllers
         }
 
         // GET: Items
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Item.ToListAsync());
+            var items = from m in _context.Item
+                 select m;
+            
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                items = items.Where(s => s.Name!.Contains(searchString));
+            }
+
+            return View(await items.ToListAsync());
         }
 
         // GET: Items/Details/5

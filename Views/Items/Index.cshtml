@@ -8,9 +8,13 @@
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
 <h1 class="h1list" align="center">List Market</h1>
 <hr>
-<p>
-    <a class="button" asp-action="Create"><img src="css/image/plus.svg" alt="add" width="20" height="20">Create New</a>
-</p>
+<form asp-controller="Items" asp-action="Index" method="get">
+    <p>
+        <a class="button" asp-action="Create"><img src="css/image/plus.svg" alt="add" width="20" height="20">Create New</a>
+        <img style="margin-right:5px;" src="css/image/search.svg" alt="search" width="20" height="20"><input type="text" placeholder="Search" name="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 <div class="divscroll">
 <table class="table">
     <thead>
