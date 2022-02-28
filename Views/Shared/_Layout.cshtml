@@ -9,30 +9,27 @@
     <link rel="stylesheet" href="~/MarketMasked.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/Logo.png" style="margin-right:5px;" alt="home" width="22" height="22">MarketMasked</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li style="margin-left:10px;" class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/house-fill.svg" alt="home" width="20" height="20"></a>
-                        </li>
-                        <li style="margin-left:10px;" class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Items" asp-action="Index"><img src="/css/image/shop.svg" alt="item" width="20" height="20"></a>
-                        </li>
-                        <li style="margin-left:10px;" class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><img src="/css/image/shield-fill.svg" alt="privacy" width="20" height="20"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+<header>
+<div class="main">
+  <label class="menu-button-wrapper" for="">
+    <input type="checkbox" class="menu-button">
+    <div class="icon-wrapper">
+      <label class="hamburger">
+        <input class="hamburger-input" type="checkbox">
+        <span class="hamburger-line first"></span>
+        <span class="hamburger-line second"></span>
+        <span class="hamburger-line third"></span>
+      </label>
+    </div>
+    <div class="item-list">
+      <div class="menutama"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/Logo.png" alt="home" width="35" height="35"><br/>MASKED</a></div>
+      <div><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/house-fill.svg" style="margin-right: 5px;" alt="home" width="20" height="20">|HOME</a></div>
+      <div><a class="nav-link text-dark" asp-area="" asp-controller="Items" asp-action="Index"><img src="/css/image/shop.svg" style="margin-right: 5px;" alt="item" width="20" height="20">|ITEMS</a></div>
+      <div><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><img src="/css/image/shield-fill.svg" style="margin-right: 5px;" alt="privacy" width="20" height="20">|SECURE</a></div>
+    </div>
+  </label>
+</div>
+</header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

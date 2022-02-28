@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UvNcjQ/nLG2OV+QvIuMhDohalPxPPoH62bE8sKikEEE=",
+  "Hash": "HFyLOnHHWn+EXLndjRQRXyFmPiykBpLNf4ww0eSHrP4=",
   "Source": "MarketMasked",
   "BasePath": "_content/MarketMasked",
   "Mode": "Default",
@@ -21879,6 +21879,23 @@
       "OriginalItemSpec": "wwwroot\\css\\image\\projector.svg"
     },
     {
+      "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\image\\Promo1.jpg",
+      "SourceId": "MarketMasked",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\",
+      "BasePath": "_content/MarketMasked",
+      "RelativePath": "css/image/Promo1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\image\\Promo1.jpg"
+    },
+    {
       "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\image\\puzzle-fill.svg",
       "SourceId": "MarketMasked",
       "SourceType": "Discovered",
@@ -28560,6 +28577,23 @@
       "OriginalItemSpec": "wwwroot\\css\\item\\C1.jpg"
     },
     {
+      "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\item\\C10.jpg",
+      "SourceId": "MarketMasked",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\",
+      "BasePath": "_content/MarketMasked",
+      "RelativePath": "css/item/C10.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\item\\C10.jpg"
+    },
+    {
       "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\item\\C2.jpg",
       "SourceId": "MarketMasked",
       "SourceType": "Discovered",
@@ -28660,6 +28694,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\item\\C7.jpg"
+    },
+    {
+      "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\item\\C8.jpg",
+      "SourceId": "MarketMasked",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\",
+      "BasePath": "_content/MarketMasked",
+      "RelativePath": "css/item/C8.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\item\\C8.jpg"
+    },
+    {
+      "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\item\\C9.jpg",
+      "SourceId": "MarketMasked",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\",
+      "BasePath": "_content/MarketMasked",
+      "RelativePath": "css/item/C9.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\item\\C9.jpg"
     },
     {
       "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\site.css",

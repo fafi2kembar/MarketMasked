@@ -10,37 +10,74 @@
 <hr>
 <form asp-controller="Items" asp-action="Index" method="get">
     <p>
-        <a class="button" asp-action="Create"><img src="css/image/plus.svg" alt="add" width="20" height="20">Create New</a>
-        <img style="margin-right:5px;" src="css/image/search.svg" alt="search" width="20" height="20"><input type="text" placeholder="Search" name="SearchString" />
+        <a class="button" asp-action="Create"><img src="css/image/plus.svg" alt="add" width="20" height="20">CREATE NEW</a>
+        <img style="margin-right:5px;margin-left:5px;" src="css/image/search.svg" alt="search" width="20" height="20"><input type="text" placeholder="Search" name="SearchString" />
         <input type="submit" value="Filter" />
     </p>
 </form>
 <div class="divscroll">
 <table class="table">
     <thead>
-        <th align="center">List</th>
+        <th style="font-size:18px; letter-spacing:2px;" colspan="3" align="center">LIST</th>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                <img src="@("~/image/"+item.ImageName)" asp-append-version="true" width="100px" height="100px"/>
+            <td style="border-top:1px solid white;" class="tdcenter" colspan="3">
+                <img style="border-radius:10px;border:1px solid black;" src="@("~/image/"+item.ImageName)" asp-append-version="true" width="250px" height="250px"/>
                 <br />
-                @Html.DisplayNameFor(model => model.Name)        :
-                @Html.DisplayFor(modelItem => item.Name)
-                <br />
-                @Html.DisplayNameFor(model => model.Description) :
-                @Html.DisplayFor(modelItem => item.Description)
-                <br />
-                @Html.DisplayNameFor(model => model.Price)       : 
-                Rp.@Html.DisplayFor(modelItem => item.Price)
-                <br />
-                <a asp-action="Edit" asp-route-id="@item.Id"><img src="css/image/pen-fill.svg" alt="edit" width="16" height="16"></a> |
-                <a asp-action="Details" asp-route-id="@item.Id"><img src="css/image/archive-fill.svg" alt="detail" width="16" height="16"></a> |
-                <a asp-action="Delete" asp-route-id="@item.Id"><img src="css/image/trash-fill.svg" alt="delete" width="16" height="16"></a>
             </td>
         </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Name)        
+            </td>
+            <td class="tdcenter">
+                :
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Description) 
+            </td>
+            <td class="tdcenter">
+                :
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.DisplayNameFor(model => model.Price)
+            </td>
+            <td class="tdcenter">
+                :
+            </td>
+            <td> 
+                Rp.@Html.DisplayFor(modelItem => item.Price)
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td class="tdcenter" >
+                <a asp-action="Edit" asp-route-id="@item.Id"><img src="css/image/pen-fill.svg" alt="edit" width="16" height="16"></a> 
+            </td>
+            <td class="tdcentericon" >    
+                <a asp-action="Details" asp-route-id="@item.Id"><img src="css/image/archive-fill.svg" alt="detail" width="16" height="16"></a> 
+            </td>
+            <td class="tdcenter" >    
+                <a asp-action="Delete" asp-route-id="@item.Id"><img src="css/image/trash-fill.svg" alt="delete" width="16" height="16"></a>
+            </td>
+        </tr>  
 }
+          
+        
     </tbody>
 </table>
 </div>
@@ -49,7 +86,7 @@
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div class="numbertext">1 / 5</div>
-    <img src="css/item/C1.jpg" style="width:40%">
+    <img src="css/item/C1.jpg" style="width:40%;">
   </div>
 
   <div class="mySlides fade">

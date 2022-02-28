@@ -32,17 +32,17 @@
             </div>
             <div class="form-group">
                 <label>Current Image</label><br />
-                <img src="@("~/image/"+Model.ImageName)" asp-append-version="true" width="200px" height="200px" alt="" />
+                <p align="center"><img src="@("~/image/"+Model.ImageName)" asp-append-version="true" width="200px" height="200px" alt="" /></p>
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ImageFile" class="control-label"></label><br />
                 <input asp-for="ImageFile" accept="image/*" />
-                <img src="" id="imgpreview" alt="" />
+                <p align="center"><img src="" id="imgpreview" alt="" /></p>
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div align="center" class="form-group">
+                <input class="button" type="submit" value="Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
