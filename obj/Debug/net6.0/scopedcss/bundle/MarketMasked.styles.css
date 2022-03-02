@@ -47,6 +47,7 @@ button.accept-policy[b-y3apmw2zuz] {
   width: 100%;
   white-space: nowrap;
   line-height: 60px;
+  margin-top: 200px;
 }
 
 *[b-y3apmw2zuz], *[b-y3apmw2zuz]::before, *[b-y3apmw2zuz]::after {
@@ -55,7 +56,7 @@ button.accept-policy[b-y3apmw2zuz] {
 
 .main[b-y3apmw2zuz] {
   position: absolute;
-  left: 30px;
+  left: 25px;
   top: 20px;
   text-align: center;
 }
@@ -125,7 +126,7 @@ button.accept-policy[b-y3apmw2zuz] {
   transition: all 0.4s cubic-bezier(0.54, -0.1, 0.57, 0.57);
   background-color: rgba(255, 255, 255, 0.521);
   color: #fff;
-  width: 115px;
+  width: 105px;
   left: 50%;
   padding: 10px 0;
   text-align: left;
@@ -143,7 +144,7 @@ button.accept-policy[b-y3apmw2zuz] {
   padding: 5px 0px;
   cursor: pointer;
   font-size: 15px;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .menu-button-wrapper .item-list .menutama[b-y3apmw2zuz] {
@@ -179,3 +180,25 @@ button.accept-policy[b-y3apmw2zuz] {
 .menu-button:checked ~ .icon-wrapper .hamburger[b-y3apmw2zuz]:before {
   transform: rotate(45deg);
 }
+.fa-facebook[b-y3apmw2zuz] {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter[b-y3apmw2zuz] {
+  background: #55ACEE;
+  color: white;
+} 
+.fa-instagram[b-y3apmw2zuz] {
+  background: #f31212;
+  color: rgb(255, 255, 255);
+}
+.fa-youtube[b-y3apmw2zuz]{
+  background: #f31212;
+  color: rgb(255, 255, 255);
+} 
+.fa-whatsapp[b-y3apmw2zuz]{
+  background: #2bc026;
+  color: rgb(255, 255, 255);
+} 

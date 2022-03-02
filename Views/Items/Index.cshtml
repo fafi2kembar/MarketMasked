@@ -10,9 +10,9 @@
 <hr>
 <form asp-controller="Items" asp-action="Index" method="get">
     <p>
-        <a class="button" asp-action="Create"><img src="css/image/plus.svg" alt="add" width="20" height="20">CREATE NEW</a>
+        <a class="buttoncrud" asp-action="Create"><img src="css/image/plus.svg" alt="add" width="20" height="20">CREATE NEW</a>
         <img style="margin-right:5px;margin-left:5px;" src="css/image/search.svg" alt="search" width="20" height="20"><input type="text" placeholder="Search" name="SearchString" />
-        <input type="submit" value="Filter" />
+        <input class="buttoncrud" type="submit" value="Filter" />
     </p>
 </form>
 <div class="divscroll">
@@ -20,7 +20,7 @@
     <thead>
         <th style="font-size:18px; letter-spacing:2px;" colspan="3" align="center">LIST</th>
     </thead>
-    <tbody>
+    <tbody class="tbody">
 @foreach (var item in Model) {
         <tr>
             <td style="border-top:1px solid white;" class="tdcenter" colspan="3">
@@ -66,15 +66,16 @@
         </tr>
         <tr>
             <td class="tdcenter" >
-                <a asp-action="Edit" asp-route-id="@item.Id"><img src="css/image/pen-fill.svg" alt="edit" width="16" height="16"></a> 
+                <a asp-action="Edit" asp-route-id="@item.Id"><img src="/css/image/Edit.png" alt="edit" width="40" height="40"></a> 
             </td>
             <td class="tdcentericon" >    
-                <a asp-action="Details" asp-route-id="@item.Id"><img src="css/image/archive-fill.svg" alt="detail" width="16" height="16"></a> 
+                <a asp-action="Details" asp-route-id="@item.Id"><img src="/css/image/Detail.png" alt="detail" width="40" height="40"></a> 
             </td>
             <td class="tdcenter" >    
-                <a asp-action="Delete" asp-route-id="@item.Id"><img src="css/image/trash-fill.svg" alt="delete" width="16" height="16"></a>
+                <a asp-action="Delete" asp-route-id="@item.Id"><img src="css/image/Delete.png" alt="delete" width="40" height="40"></a>
             </td>
-        </tr>  
+        </tr>
+        
 }
           
         
@@ -82,34 +83,37 @@
 </table>
 </div>
 <div class="divdum">
+<div>
+    <p style="color:black;text-transform:uppercase;font-size:18px;letter-spacing:3px;">Best Seller</p>
+</div>
 <div class="slideshowcar">
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
-    <div class="numbertext">1 / 5</div>
-    <img src="css/item/C1.jpg" style="width:40%;">
+    <div style="visibility: hidden;" class="numbertext">1 / 5</div>
+    <img src="css/item/C1.jpg" style="width:90%; height:200px;">
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">2 / 5</div>
-    <img src="css/item/C2.jpg" style="width:40%">
+    <div style="visibility: hidden;" class="numbertext">2 / 5</div>
+    <img src="css/item/C2.jpg" style="width:90%; height:200px;">
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">3 / 5</div>
-    <img src="css/item/C3.jpg" style="width:40%">
+    <div style="visibility: hidden;" class="numbertext">3 / 5</div>
+    <img src="css/item/C3.jpg" style="width:90%; height:200px;">
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">4 / 5</div>
-    <img src="css/item/C4.jpg" style="width:40%">
+    <div style="visibility: hidden;" class="numbertext">4 / 5</div>
+    <img src="css/item/C4.jpg" style="width:90%; height:200px;">
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">5 / 5</div>
-    <img src="css/item/C5.jpg" style="width:40%">
+    <div style="visibility: hidden;" class="numbertext">5 / 5</div>
+    <img src="css/item/C5.jpg" style="width:90%; height:200px;" >
   </div>
-
-  <div class="dotdiv" style="text-align:center">
+  
+  <div style="margin-top:100px;" class="dotdiv" style="text-align:center">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
