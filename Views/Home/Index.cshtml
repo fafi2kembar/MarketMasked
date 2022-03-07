@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
  <!-- Slideshow container -->
-<div class="slideshow-container">
+<div id="section1" class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
@@ -21,25 +21,31 @@
     <img src="/css/image/Promo2.jpg" style="width:100%; height:400px">
   </div>
 
+  <div class="mySlides fade">
+    <div style="visibility:hidden;" class="numbertext">3 / 3</div>
+    <img src="/css/image/Promo3.jpg" style="width:100%; height:400px">
+  </div>
+
 <br>
 
 <!-- The dots/circles -->
-<div style="margin-top:-20px;text-align:center">
+<div style="margin-top:-10px;text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span>
   <span class="dot" onclick="currentSlide(2)"></span>
   <span class="dot" onclick="currentSlide(3)"></span>
 </div> 
 </div>
 
-<div style="float:left;width:30%;height:220px;margin-bottom:20px;margin-top:30px;margin-right:20px;text-align:center" class="textdivcool text-center">
-    <h1 class="texth1" style="text-transform:uppercase;letter-spacing:2px" class="display-4"><img style="border-radius:10px; margin-top:20px;" src="/css/image/Logo.png" alt="home" width="50" height="50">
+<div style="width:100%;margin-right:0px;margin-left:0px;background-color:grey">
+<div style="color:black;float:left;width:30%;height:220px;margin-bottom:20px;margin-top:70px;margin-right:20px;text-align:center" class="textdivcool text-center">
+    <h1 class="texth1" style="text-transform:uppercase;letter-spacing:2px" class="display-4"><img style="border-radius:10px; margin-top:20px;" src="/css/image/Logo.gif" alt="home" width="70" height="70">
     <br/>Market Masked</h1>
-    <p style="margin:10px;font-size:18px;letter-spacing:1px;color:white">Hello Hero!<br/> you can buy the superior item from here</p>
+    <p style="margin:10px;font-size:18px;letter-spacing:1px;color:black">Hello Hero!<br/> you can buy the superior item from here</p>
 </div>
-<div style="float:right;width:65%;height:220px;margin-bottom:210px;margin-top:30px;text-align:center" class="textdivcool text-center">
+<div style="float:right;width:65%;height:220px;margin-top:70px;text-align:center" class="textdivcool text-center">
     <table style="width:100%;height:100%;">
       <tr>
-        <td style="color:white;border-right:1px solid white" class="tdfoll">
+        <td style="color:black;border-right:4px solid black" class="tdfoll">
               <h5>FOLLOW US</h5>
               <a href="#" class="fa fa-facebook"></a>
               <a href="#" class="fa fa-twitter"></a>
@@ -51,10 +57,45 @@
         </td>
       </tr>
       <tr>
-        <td style="border-right:1px solid white" class="tdfoll">
+        <td style="color:black;border-right:4px solid black" class="tdfoll">
               <p>CONTACT US<a href="#" class="fa fa-whatsapp"></a></p>
         </td>
       </tr>
     </table>
 </div>
 
+<div id="section2" style="float:left;background-color:transparent;margin-bottom:250px;margin-top:100px;width:100%">
+  <h3 align="center" style="text-align: center;text-transform:capitalize;font-weight:bold;"><span class="spanhall" style="padding-bottom:10px;
+  border-bottom: 4px ridge grey;"><img style="margin-right:5px;margin-bottom:5px;" src="/css/image/star-fill.svg" alt="favorite" width="40" height="40">Hall Of Fame<img style="margin-left:5px;margin-bottom:5px;" src="/css/image/star-fill.svg" alt="favorite" width="40" height="40"></span></h3>
+  <table class="tableprod" style="width:100%">
+    <tr>
+      <td>
+        <img src="css/item/C1.jpg" style="width:200px; height:200px;">
+      </td>
+      <td>
+        <img src="css/item/C2.jpg" style="width:200px; height:200px;">
+      </td>
+      <td>
+        <img src="css/item/C3.jpg" style="width:200px; height:200px;">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <img src="css/item/C4.jpg" style="width:200px; height:200px;">
+      </td>
+      <td>
+        <img src="css/item/C5.jpg" style="width:200px; height:200px;">
+      </td>
+      <td>
+        <img src="css/item/C6.jpg" style="width:200px; height:200px;">
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div style="position:absolute;top:20px;right:20px;">
+  <a class="buttoncrud" href="#section2"><img style="margin-right:5px;margin-bottom:5px;" src="/css/image/star-fill.svg" alt="favorite" width="20" height="20">We Sell</a>
+</div>
+<div style="position:absolute;bottom:200px;right:20px;">
+  <a class="buttoncrud" href="#section1"><img style="margin-right:5px;margin-bottom:5px;" src="/css/image/arrow-up-circle-fill.svg" alt="top" width="20" height="20">To the Top</a>
+</div>

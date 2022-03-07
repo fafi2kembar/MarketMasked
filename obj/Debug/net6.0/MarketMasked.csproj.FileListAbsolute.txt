@@ -283,3 +283,12 @@ D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\runtimes\win\lib\netcoreap
 D:\Project\LearnASP.NET\MarketMasked\obj\Debug\net6.0\MarketMasked.csproj.CopyComplete
 D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\package-lock.json
 D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Codehaks.Pagination.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\System.Web.Mvc.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\System.Web.Razor.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\System.Web.Helpers.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\System.Web.WebPages.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\PagedList.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\PagedList.Mvc.dll

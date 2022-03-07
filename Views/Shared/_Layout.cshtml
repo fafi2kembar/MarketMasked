@@ -23,7 +23,7 @@
       </label>
     </div>
     <div class="item-list">
-      <div class="menutama"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/Logo.png" alt="home" width="35" height="35"><br/>MASKED</a></div>
+      <div class="menutama"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img style="border-radius:5px;" src="/css/image/Logo.gif" alt="home" width="35" height="35"><br/>MASKED</a></div>
       <div><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/Home.png" style="margin-right: 5px;" alt="home" width="25" height="25">HOME</a></div>
       <div><a class="nav-link text-dark" asp-area="" asp-controller="Items" asp-action="Index"><img src="/css/image/Store.png" style="margin-right: 5px;" alt="item" width="25" height="25">ITEMS</a></div>
       <div><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><img src="/css/image/Privacy.png" style="margin-right: 5px;" alt="privacy" width="25" height="25">SECURE</a></div>
@@ -37,7 +37,7 @@
         </main>
     </div>
 
-    <footer class="border-top bg-dark footer text-muted">
+    <footer style="margin-top:40px" class="border-top bg-dark footer text-muted">
         <div class="container">
             <div class="footericon" align="center">
               <table style="width:100%;height:100%;">
@@ -57,10 +57,15 @@
         </td>
       </tr>
     </table>
-            </div>
+    </div>
             <hr />
-            &copy; 2022 - MarketMasked - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+            <div style="float:left;width:20%;letter-spacing:2px;">
+            &copy; 2022 - MarketMasked - <a style="text-decoration:none;" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
+            <div style="float:right;width:60%;letter-spacing:2px;text-align:right;">
+              <h1><img style="border-radius:10px;margin-right:5px;margin-bottom:5px;" src="/css/image/Logo.gif" alt="home" width="35" height="35">MASKED-EGO</h1></div>
+            </div>
+    </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

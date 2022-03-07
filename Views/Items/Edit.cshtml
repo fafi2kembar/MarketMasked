@@ -33,7 +33,6 @@
             <div class="form-group">
                 <label>Current Image</label><br />
                 <p align="center"><img src="@("~/image/"+Model.ImageName)" asp-append-version="true" width="200px" height="200px" alt="" /></p>
-                <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ImageFile" class="control-label"></label><br />
@@ -48,7 +47,7 @@
     </div>
 </div>
 
-<div>
+<div style="margin-bottom: 150px;">
     <a class="buttoncrud" asp-action="Index">Back to List</a>
 </div>
 

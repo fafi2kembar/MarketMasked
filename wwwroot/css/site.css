@@ -20,8 +20,7 @@ body {
 /* vt323-regular - latin */
 body {
   font-family: 'VT323', monospace;
-  background: rgb(177,0,176);
-  background: linear-gradient(90deg, rgba(177,0,176,1) 0%, rgba(9,9,125,0.5747432762167367) 35%, rgba(0,255,213,0.8184407552083334) 100%);
+  background: rgb(255, 255, 255);
 }
 
 * {box-sizing:border-box}
@@ -100,16 +99,18 @@ body {
 
 
 .table {
-	
-  overflow:scroll;
 	border-collapse: collapse;
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  
+  counter-reset: serial-number;
+}
+.table td:first-child:before {
+  counter-increment: serial-number;  /* Increment the serial number counter */
+  content: counter(serial-number);
 }
 td {
 	padding: 10px;
 	background-color: rgba(50, 56, 90, 0.521);
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
   border: 0px;
   text-align: left;
   letter-spacing: 2px;
@@ -118,6 +119,7 @@ td {
 .tdfoll{
   background-color: transparent;
   text-align: center;
+  color: black;
 }
 .tdfoll tr:hover{
   background-color: transparent;
@@ -125,7 +127,7 @@ td {
 .tdcenter {
 	padding: 10px;
 	background-color: rgba(50, 56, 90, 0.521);
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
   border: 0px;
   text-align: center;
 }
@@ -140,7 +142,7 @@ td {
 .tdtable {
 	padding: 10px;
 	background-color: rgba(50, 56, 90, 0.521);
-	color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
   border-bottom: 1px solid white;
   text-align: center;
 }
@@ -155,19 +157,20 @@ thead {
 .tbody tr:hover {
 			background-color: rgba(255,255,255,0.3);
 		}
+.tbody td{
+  border:1px solid rgb(0, 0, 0)
+}
+.theadtab th{
+  border:1px solid rgb(0, 0, 0)
+}
 .divscroll {
-  overflow-y:scroll;
   height:450px;
-  width:80%;
-  scrollbar-color: rgba(10, 168, 241, 0.445) rgba(255, 255, 255, 0.651);
-  scrollbar-shadow-color: #717171;
-	color: rgb(255, 255, 255);
+  width:79%;
+	color: rgb(0, 0, 0);
   text-align:center;
   margin-bottom:190px;
   float:left;
-  border:3px solid gray;
-  border-radius: 10px;
-  background-color: rgba(50, 56, 90, 0.521);
+  background-color: rgba(255, 255, 255, 0.521);
 }
 .divscroll::-webkit-scrollbar {
   width: 12px;
@@ -205,7 +208,7 @@ hr{
   border:1.5px solid black;
 }
 .h1list{
-  color:white;
+  color:rgb(0, 0, 0);
 }
 .dotdiv{
   margin:20px;
@@ -225,7 +228,7 @@ hr{
   font-family: inherit;
   font-weight: 500;
   color: black;
-  background-color: white;
+  background-color: rgb(107, 233, 250);
  }
  
  .buttoncrud:hover {
@@ -259,7 +262,7 @@ hr{
  }
  
  .buttoncrud::after {
-  background-color: #fff;
+  background-color: rgb(107, 233, 250);
  }
  
  .buttoncrud:hover::after {
@@ -271,9 +274,7 @@ hr{
 
 .textdivcool
 {
-  background-color: rgba(255, 255, 255, 0.288);
   border-radius: 30px;
-  box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(50, 206, 245, 0.15);
   transition: box-shadow 0.2s linear;
   margin: 0.5em; /* Increased margin since the box-shado expands outside the element, like outline */
   }
@@ -285,7 +286,7 @@ hr{
 
 .texth1{
   background-size: 400%;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
  /* Style all font awesome icons */
@@ -329,4 +330,21 @@ hr{
 .fa-whatsapp{
   background: #2bc026;
   color: rgb(255, 255, 255);
-} 
+}
+
+.tableprod{
+  border-spacing: 30px;
+}
+.tableprod td{
+  text-align: center;
+  background-color:transparent;
+  padding:20px;
+}
+.tableprod img:hover { 
+  box-shadow: 2.6px 2.6px 2.6px 2.6px #78f3f3;
+}
+.tableprod img{
+  border-radius: 10px;
+  transition: box-shadow 0.2s linear;
+}
+

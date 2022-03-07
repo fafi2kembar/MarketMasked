@@ -24,6 +24,7 @@ namespace MarketMasked.Models
         [Display(Name = "Image Name")]
         public string? ImageName { get; set; }
 
+        [Required]
         [NotMapped]
         [Display(Name = "Upload Gambar")]
         public IFormFile? ImageFile { get; set; }

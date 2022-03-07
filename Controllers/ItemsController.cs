@@ -11,6 +11,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
+using System.Web;  
+using PagedList;
+using PagedList.Mvc;
+using MarketMasked.Models; 
+
 
 namespace MarketMasked.Controllers
 {
@@ -27,17 +32,26 @@ namespace MarketMasked.Controllers
         }
 
         // GET: Items
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string searchString, string currentFilter, int? pageNumber)
         {
+            ViewData["CurrentFilter"] = searchString;
             var items = from m in _context.Item
                  select m;
-            
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
             if (!String.IsNullOrEmpty(searchString))
             {
                 items = items.Where(s => s.Name!.Contains(searchString));
             }
-
-            return View(await items.ToListAsync());
+            int pageSize = 5;
+            return View(await PaginatedList<Item>.CreateAsync(items.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
         // GET: Items/Details/5
