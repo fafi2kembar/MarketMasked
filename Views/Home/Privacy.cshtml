@@ -6,3 +6,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
 <p>Use this page to detail your site's privacy policy.</p>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+
+    $( ".change" ).on("click", function() {
+    if( $( "body" ).hasClass( "dark-mode" )) {
+      $( "body" ).removeClass( "dark-mode" );
+      $( ".change" ).text( "OFF" );
+    } else {
+      $( "body" ).addClass( "dark-mode" );
+      $( ".change" ).text( "ON" );
+    }
+    });
+    </script>
+}

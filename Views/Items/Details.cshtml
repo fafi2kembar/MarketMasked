@@ -48,3 +48,19 @@
     <a class="buttoncrud" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a class="buttoncrud" asp-action="Index">Back to List</a>
 </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+
+    $( ".change" ).on("click", function() {
+    if( $( "body" ).hasClass( "dark-mode" )) {
+      $( "body" ).removeClass( "dark-mode" );
+      $( ".change" ).text( "OFF" );
+    } else {
+      $( "body" ).addClass( "dark-mode" );
+      $( ".change" ).text( "ON" );
+    }
+    });
+    </script>
+}

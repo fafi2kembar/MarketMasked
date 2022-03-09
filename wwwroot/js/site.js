@@ -33,3 +33,12 @@ function readURL(input) {
     reader.readAsDataURL(input.files[0]);
   }
 }
+$( ".change" ).on("click", function() {
+  if( $( "body" ).hasClass( "dark-mode" )) {
+      $( "body" ).removeClass( "dark-mode" );
+      $( ".change" ).text( "OFF" );
+  } else {
+      $( "body" ).addClass( "dark-mode" );
+      $( ".change" ).text( "ON" );
+  }
+});
