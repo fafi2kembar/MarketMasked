@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zlRHFs12XyxsZfRSKdDjZVVlROkxQoeU9NGHQcKrrXQ=",
+  "Hash": "pEqKr8ilcXRK57gO77Hj5Oh9iobUX8IlvRy6ZDkFHf4=",
   "Source": "MarketMasked",
   "BasePath": "_content/MarketMasked",
   "Mode": "Default",
@@ -10557,6 +10557,23 @@
       "OriginalItemSpec": "wwwroot\\css\\image\\droplet.svg"
     },
     {
+      "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\image\\Dummy.png",
+      "SourceId": "MarketMasked",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\",
+      "BasePath": "_content/MarketMasked",
+      "RelativePath": "css/image/Dummy.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\image\\Dummy.png"
+    },
+    {
       "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\image\\ear-fill.svg",
       "SourceId": "MarketMasked",
       "SourceType": "Discovered",
@@ -12070,6 +12087,23 @@
       "OriginalItemSpec": "wwwroot\\css\\image\\facebook.svg"
     },
     {
+      "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\image\\Fahri.jpg",
+      "SourceId": "MarketMasked",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\",
+      "BasePath": "_content/MarketMasked",
+      "RelativePath": "css/image/Fahri.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\image\\Fahri.jpg"
+    },
+    {
       "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\image\\fan.svg",
       "SourceId": "MarketMasked",
       "SourceType": "Discovered",
@@ -12085,6 +12119,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\image\\fan.svg"
+    },
+    {
+      "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\image\\Farhan.jpg",
+      "SourceId": "MarketMasked",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\",
+      "BasePath": "_content/MarketMasked",
+      "RelativePath": "css/image/Farhan.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\image\\Farhan.jpg"
     },
     {
       "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\image\\file-arrow-down-fill.svg",

@@ -1,0 +1,80 @@
+@{
+    ViewData["Title"] = "About Us";
+}
+<h1 align="center">@ViewData["Title"]</h1>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+
+<div style="margin-bottom:100px;" class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/css/image/Dummy.png" alt="Farhan" style="width:100%">
+      <div style="font-size:20px;" class="container">
+        <h2 align="center" >Muhammad Farhan</h2>
+        <p class="title">Skill  : Programmer</p>
+        <p>I just love art code</p>
+        <p>Email  : fafimuhammad@gmail.com</p>
+        <p align="center"><button class="buttoncrud">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div  class="column">
+    <div class="card">
+        <img align="center" src="/css/image/Logo.gif" alt="Fahri" style="width:100%">
+        <div class="container">
+            <h2 style="position:absolute;top:90%;left:20%;color:white;text-align:center;letter-spacing:2px;">WE ARE MASKED EGO</h2>
+        </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/css/image/Dummy.png" alt="Fahri" style="width:100%">
+      <div style="font-size:20px;" class="container">
+        <h2 align="center" >Muhammad Fahri</h2>
+        <p class="title">Skill  : Artist</p>
+        <p>Have Fun dude</p>
+        <p>Email  : muhammadfarcry@gmail.com</p>
+        <p align="center"><button class="buttoncrud">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+</div>
+<hr />
+<div class="textdivcool" style="float:left;width:40%;margin-bottom:210px;height:200px;">
+    <h3 style="margin-top:20px;letter-spacing:2px;text-align:center" ><span class="spandark">WE'RE DIFFERENT</span></h3>
+    <ul style="font-size:20px;">
+        <li>We're Fast</li>
+        <li>Online Everytime</li>
+        <li>Price ? A million maybe</li>
+        <li>Guarantee 100% !, We Can't Give That</li>
+    </ul>
+</div>
+<div class="textdivcool" style="float:right;width:50%;margin-bottom:210px;height:200px;">
+    <h3 style="margin-top:20px;letter-spacing:2px;" ><span class="spandark">OUR STORY</span></h3>
+    <p align="justify" style="font-size:20px;margin-right:10px;margin-left:10px;">
+        Ok saya akan menjelaskan dengan memakai bahasa Indonesia, kenapa saya membuat ini
+        karena kami sangatlah suka tentang belajar bahasa pemrograman apapun, dan sangat
+        menyukai desain yang sangat powerful dan colorful
+    </p>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+
+    $( ".change" ).on("click", function() {
+    if( $( "body" ).hasClass( "dark-mode" )) {
+      $( "body" ).removeClass( "dark-mode" );
+      $( ".change" ).text( "OFF" );
+    } else {
+      $( "body" ).addClass( "dark-mode" );
+      $( ".change" ).text( "ON" );
+    }
+    });
+    </script>
+}

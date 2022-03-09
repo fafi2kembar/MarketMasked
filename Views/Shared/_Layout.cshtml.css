@@ -78,14 +78,19 @@ button.accept-policy {
   right: 0;
   bottom: 0;
   border-radius: 5px;
-  background: #53f9f9;
+  background: #ffffff;
+  box-shadow: 0 2.5px 5px #00000088;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2297da, #539bf9);
+  background: -webkit-linear-gradient(to right, #ffffff, #ffffff);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #22d4da, #26b9fd);
+  background: linear-gradient(to right, #ffffff, #ffffff);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   transform: rotate(0deg);
   transition: all 0.4s cubic-bezier(0.54, -0.1, 0.57, 0.57);
+}
+.dark-mode .hamburger:before{
+  background: #000000;
+  box-shadow: 0 5px 10px #ffffff88;
 }
 .hamburger .hamburger-input {
   position: absolute;
@@ -98,12 +103,15 @@ button.accept-policy {
 }
 .hamburger .hamburger-line {
   width: 100%;
-  background: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
   height: 2px;
   display: block;
   border-radius: 6px;
   transition: transform 0.4s cubic-bezier(0.54, -0.81, 0.57, 0.57);
   position: relative;
+}
+.dark-mode .hamburger .hamburger-line{
+  background: rgb(255, 255, 255);
 }
 .hamburger .hamburger-line.first, .hamburger .hamburger-line.third {
   width: 50%;
