@@ -31,6 +31,7 @@ namespace MarketMasked.Controllers
             this._hostEnvironment = hostEnvironment;
         }
 
+
         // GET: Items
         public async Task<IActionResult> Index(string searchString, string currentFilter, int? pageNumber)
         {

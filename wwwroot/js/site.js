@@ -5,6 +5,18 @@
 var slideIndex = 0;
 showSlides();
 
+var bleep= new Audio() ;
+var slidenav= new Audio() ;
+bleep.src = "/css/audio/Sound.mp3";
+slidenav.src ="/css/audio/Navsound.mp3";
+
+var audio  = new Audio('/css/audio/Buttonbiasa.mp3');
+$(".buttonbleep").mousedown(function() {
+  audio.load();
+  audio.play();
+});
+
+
 function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -42,3 +54,10 @@ $( ".change" ).on("click", function() {
       $( ".change" ).text( "ON" );
   }
 });
+
+var delay = 5000;;
+
+$(document).ready(function(){
+$(".preloader").fadeIn(3000).delay(3000).fadeOut();
+})
+

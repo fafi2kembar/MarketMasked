@@ -86,7 +86,7 @@ button.accept-policy {
   background: linear-gradient(to right, #ffffff, #ffffff);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   transform: rotate(0deg);
-  transition: all 0.4s cubic-bezier(0.54, -0.1, 0.57, 0.57);
+  transition: all 0.6s cubic-bezier(0.54, -0.1, 0.57, 0.57);
 }
 .dark-mode .hamburger:before{
   background: #000000;

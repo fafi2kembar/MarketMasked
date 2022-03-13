@@ -437,9 +437,7 @@ hr{
   -webkit-box-shadow: 5px 5px 0px 0px #34e7e7, 10px 10px 0px 0px #3b9dec, 15px 15px 0px 0px #1e7bbd, 20px 20px 0px 0px #178aee, 25px 25px 0px 0px #07469900, 5px 5px 15px 5px rgba(255, 255, 255, 0.781); 
   box-shadow: 5px 5px 0px 0px #34e7e7, 10px 10px 0px 0px #3b9dec, 15px 15px 0px 0px #1e7bbd, 20px 20px 0px 0px #178aee, 25px 25px 0px 0px #07469900, 5px 5px 15px 5px rgba(255, 255, 255, 0.781);
 }
-.dark-mode img{
-  filter: brightness(.8) contrast(1.2);
-}
+
 .buttontogled {
   position: relative;
   font-size: 17px;
@@ -631,4 +629,39 @@ hr{
 }
 .dark-mode .divwe:hover{
   box-shadow: 0 5px 20px #ffffff88;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #fff;
+}
+.preloader .loading {
+  margin-top: 20%;
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+.loading p{
+animation: animate 
+1.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+  opacity: 0;
+  }
+
+  50% {
+  opacity: 0.7;
+  }
+
+  100% {
+  opacity: 0;
+  }
 }

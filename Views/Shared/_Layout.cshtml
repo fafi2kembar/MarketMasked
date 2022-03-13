@@ -13,7 +13,7 @@
 <header>
 <div class="main">
   <label class="menu-button-wrapper" for="">
-    <input type="checkbox" class="menu-button">
+    <input onmousedown="bleep.play()" type="checkbox" class="menu-button">
     <div class="icon-wrapper">
       <label class="hamburger">
         <input class="hamburger-input" type="checkbox">
@@ -39,7 +39,7 @@
 
 <div class="toggledark" style="position:absolute;top:70px;right:5px;">
 <p style="margin:10px;font-size:17px;" align="center">
-DARK MODE<br/><button class="change buttontogled">OFF</button>
+DARK MODE<br/><button onmousedown="bleep.play()" class="change buttontogled">OFF</button>
 </p>
 </div>
 
@@ -57,7 +57,7 @@ DARK MODE<br/><button class="change buttontogled">OFF</button>
               <a href="#" class="fa fa-youtube"></a>
         </td>
         <td style="color:white;border-right:1px solid white" class="tdfoll">
-          <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Home" asp-action="About"><img src="/css/image/file-person-fill.svg" style="margin-right: 5px;" alt="home" width="40" height="40">ABOUT US</a>
+          <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Home" asp-action="About"> ABOUT US</a>
         </td>
         <td class="tdfoll">
               <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/Home.png" style="margin-right: 5px;" alt="home" width="40" height="40">|HOME</a>

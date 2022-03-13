@@ -16382,6 +16382,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Project\\LearnASP.NET\\MarketMasked\\Views\\Home\\About.cshtml",
+      "TargetPath": "Views\\Home\\About.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Project\\LearnASP.NET\\MarketMasked\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
