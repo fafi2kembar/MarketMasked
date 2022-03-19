@@ -142,6 +142,7 @@ button.accept-policy {
   user-select: none;
   border-radius:4px 4px;
   
+  
 }
 .menu-button-wrapper .item-list:hover {
   border-radius: 4px 4px 10% 10%;
@@ -150,14 +151,14 @@ button.accept-policy {
 .menu-button-wrapper .item-list div {
   padding: 5px 0px;
   cursor: pointer;
-  font-size: 15px;
-  letter-spacing: 1px;
+  font-size: 12px;
 }
 
 .menu-button-wrapper .item-list .menutama {
   
   cursor: pointer;
   text-align: center;
+  
 }
 
 .menu-button-wrapper .menu-button {
@@ -208,4 +209,14 @@ button.accept-policy {
 .fa-whatsapp{
   background: #2bc026;
   color: rgb(255, 255, 255);
-} 
+}
+.fa-paper-plane{
+  background: transparent;
+  box-shadow: none;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(121, 121, 121);
+}
+.fa-paper-plane:hover{
+  cursor: pointer;
+}

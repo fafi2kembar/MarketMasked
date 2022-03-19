@@ -61,3 +61,12 @@ $(document).ready(function(){
 $(".preloader").fadeIn(3000).delay(3000).fadeOut();
 })
 
+$(document).ready(function(){
+  $('#hideshow').live('click', function(event) {        
+    $('#content').toggle('show');
+  });
+})
+
+$("#toggle").on("click", function(){
+  $("#content").toggle();                 // .fadeToggle() // .slideToggle()
+});

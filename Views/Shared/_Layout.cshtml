@@ -24,9 +24,9 @@
     </div>
     <div class="item-list">
       <div class="menutama"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img style="border-radius:5px;" src="/css/image/Logo.gif" alt="home" width="35" height="35"><br/>MASKED</a></div>
-      <div><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/Home.png" style="margin-right: 5px;" alt="home" width="25" height="25">HOME</a></div>
-      <div><a class="nav-link text-dark" asp-area="" asp-controller="Items" asp-action="Index"><img src="/css/image/Store.png" style="margin-right: 5px;" alt="item" width="25" height="25">ITEMS</a></div>
-      <div><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><img src="/css/image/Privacy.png" style="margin-right: 5px;" alt="privacy" width="25" height="25">SECURE</a></div>
+      <div><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/Home.png" style="margin-right: 5px;" alt="home" width="25" height="25">Home</a></div>
+      <div><a class="nav-link text-dark" asp-area="" asp-controller="Items" asp-action="Index"><img src="/css/image/Store.png" style="margin-right: 5px;" alt="item" width="25" height="25">Items</a></div>
+      <div><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><img src="/css/image/Privacy.png" style="margin-right: 5px;" alt="privacy" width="25" height="25">Secure</a></div>
     </div>
   </label>
 </div>
@@ -38,9 +38,24 @@
     </div>
 
 <div class="toggledark" style="position:absolute;top:70px;right:5px;">
-<p style="margin:10px;font-size:17px;" align="center">
-DARK MODE<br/><button onmousedown="bleep.play()" class="change buttontogled">OFF</button>
+<p style="margin:10px;font-size:14px;" align="center">
+Dark Mode<br/><button onmousedown="bleep.play()" class="change buttontogled">OFF</button>
 </p>
+</div>
+
+<div id="content" class="divchat" style="position:absolute;bottom:200px;right:5px;margin-bottom:120px;width:20%;height:300px;overflow-y:auto;overflow-x:hidden;">
+          <h5 align="center" class="chat1"><img src="/css/image/chat-fill.svg" style="margin-bottom:5px;margin-right:5px;" alt="chat" width="20" height="20">Chat</h5>
+              <img src="/css/image/person-circle.svg" style="margin-left: 10px;margin-right: 5px;"  width="25" height="25">Username :
+              <input type="text" size="13px" id="userInput" />
+              <textarea class="areatext" style="float:left;line-height:16px;box-sizing:border-box;width:80%;outline: 0 !important;background:transparent;
+              overflow: hidden;resize: none;border: 0;" type="text" id="messageInput" placeholder="Type your message here..." autofocus></textarea>
+              <a style="float:right;width:20%;margin-top: 30px;margin-bottom: 30px;" id="sendButton" ><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+              <ul style="list-style-image:url('/css/image/person-circle.svg');
+              list-style-position: outside;float:left;" id="messagesList"></ul>
+</div>
+
+<div id="toogle" style="position:absolute;bottom:250px;right:5px;">
+<button onmousedown="bleep.play()" class="buttoncrud" id="toggle"><img src="/css/image/chat-fill.svg" alt="chat" width="30" height="30"></button>
 </div>
 
     <footer style="margin-top:40px" class="border-top bg-dark footer text-muted">
@@ -49,7 +64,7 @@ DARK MODE<br/><button onmousedown="bleep.play()" class="change buttontogled">OFF
               <table style="width:100%;height:100%;">
       <tr>
         <td style="color:white;border-right:1px solid white" class="tdfoll">
-          CONTACT US :
+          Contact Us :
               <a href="#" class="fa fa-facebook"></a>
               <a href="#" class="fa fa-twitter"></a>
               <a href="#" class="fa fa-instagram"></a>
@@ -57,12 +72,12 @@ DARK MODE<br/><button onmousedown="bleep.play()" class="change buttontogled">OFF
               <a href="#" class="fa fa-youtube"></a>
         </td>
         <td style="color:white;border-right:1px solid white" class="tdfoll">
-          <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Home" asp-action="About"> ABOUT US</a>
+          <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Home" asp-action="About"> About Us</a>
         </td>
         <td class="tdfoll">
-              <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/Home.png" style="margin-right: 5px;" alt="home" width="40" height="40">|HOME</a>
-              <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Items" asp-action="Index"><img src="/css/image/Store.png" style="margin-right: 5px;" alt="item" width="40" height="40">|ITEMS</a>
-              <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Home" asp-action="Privacy"><img src="/css/image/Privacy.png" style="margin-right: 5px;" alt="privacy" width="40" height="40">|SECURE</a>
+              <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/Home.png" style="margin-right: 5px;" alt="home" width="40" height="40">|Home</a>
+              <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Items" asp-action="Index"><img src="/css/image/Store.png" style="margin-right: 5px;" alt="item" width="40" height="40">|Items</a>
+              <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Home" asp-action="Privacy"><img src="/css/image/Privacy.png" style="margin-right: 5px;" alt="privacy" width="40" height="40">|Secure</a>
         </td>
       </tr>
     </table>
@@ -72,7 +87,7 @@ DARK MODE<br/><button onmousedown="bleep.play()" class="change buttontogled">OFF
             &copy; 2022 - MarketMasked - <a style="text-decoration:none;" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             </div>
             <div style="float:right;width:60%;letter-spacing:2px;text-align:right;">
-              <h1><img style="border-radius:10px;margin-right:5px;margin-bottom:5px;" src="/css/image/Logo.gif" alt="home" width="35" height="35">MASKED-EGO</h1></div>
+              <h1 style="font-weight:bold;font-variant:small-caps"><img style="border-radius:10px;margin-right:5px;margin-bottom:5px;" src="/css/image/Logo.gif" alt="home" width="35" height="35">MASKED-EGO</h1></div>
             </div>
     </div>
     </footer>

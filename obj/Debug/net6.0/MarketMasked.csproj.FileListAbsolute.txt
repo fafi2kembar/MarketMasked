@@ -292,3 +292,14 @@ D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\System.Web.WebPages.dll
 D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
 D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\PagedList.dll
 D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\PagedList.Mvc.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Client.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Common.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\System.IO.Pipelines.dll
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\libman.json
