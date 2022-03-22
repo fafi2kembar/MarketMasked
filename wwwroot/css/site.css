@@ -131,6 +131,14 @@ td {
   font-size: 16px;
 }
 
+.dark-mode .tdfoll .blue{
+  text-shadow: 2px 2px 3px blue;
+}
+
+.dark-mode .tdfoll .red{
+  text-shadow: 2px 2px 3px rgb(255, 0, 0);
+}
+
 .tdfoll tr:hover{
   background-color: transparent;
 }
@@ -403,18 +411,45 @@ hr{
 
 .tableprod{
   border-spacing: 30px;
+  border-collapse: separate;
+}
+.dark-mode .tableprod h5{
+  color:white;
 }
 .tableprod td{
   text-align: center;
-  background-color:transparent;
-  padding:20px;
+  background-image:url('/css/image/Cardlightmode.jpg');
+  padding:30px;
+  border-radius: 20px;
+  width:260px;
+  height:530px;
+  transition:all 0.4s;
+  background-size: cover;
+}
+
+
+
+
+.dark-mode .tableprod td{
+  background-image:url('/css/image/Carddarkmode.jpg');
+  background-size: cover;
+}
+.tableprod p{
+  font-size: 15px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.dark-mode .tableprod p{
+  color:white;
 }
 .chat1 { 
   position: sticky; 
   top: 0; 
   z-index: 1;
   background-color: rgb(0, 211, 248); 
-  padding:10px
+  padding:10px;
+  color:white;
+  font-weight: bold;
 }
 .areatext{
   color: black;
@@ -668,9 +703,10 @@ hr{
 .preloader .loading {
   margin-top: 20%;
   text-align: center;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  font-size: 40px;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  font-size: 30px;
 }
 .loading p{
 animation: animate 
@@ -707,4 +743,64 @@ animation: animate
 }
 #content{
     display:none;
+}
+.productname {
+  display: flex;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  color: #ccc;
+  margin-bottom: 18px;
+  margin-top: 10px;
+}
+.productlink {
+  width:60%;
+  float: right;
+  text-align: right;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+
+.productharga {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 600;
+  float: left;
+  width: 30%;
+}
+.dark-mode .productharga {
+  color: #ffc526;
+}
+.fa-heart{
+  background: transparent;
+  box-shadow: none;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(0, 0, 0);
+}
+.dark-mode .fa-heart{
+  color:white;
+}
+.fa-heart:hover{
+  cursor: pointer;
+}
+.fa-heart:active{
+  color: rgb(255, 0, 0);
+}
+
+.fa-shopping-cart{
+  background: transparent;
+  box-shadow: none;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(0, 0, 0);
+}
+.dark-mode .fa-shopping-cart{
+  color: rgb(255, 255, 255);
+}
+.fa-shopping-cart:hover{
+  cursor: pointer;
+  color: #fbb72c;
 }
