@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xMSakEwe6oQcWIXI7dOGNF8vDLG+j46fBsGBLj6JRik=",
+  "Hash": "cAnoZvd57pEK1Q1tiEMpVjw4nm+ALXhSstOwc8BLUEY=",
   "Source": "MarketMasked",
   "BasePath": "_content/MarketMasked",
   "Mode": "Default",
@@ -5829,6 +5829,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\image\\Carddarkmode.jpg"
+    },
+    {
+      "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\image\\Carddetaildark.jpg",
+      "SourceId": "MarketMasked",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\",
+      "BasePath": "_content/MarketMasked",
+      "RelativePath": "css/image/Carddetaildark.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\image\\Carddetaildark.jpg"
+    },
+    {
+      "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\image\\Carddetaillight.jpg",
+      "SourceId": "MarketMasked",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\",
+      "BasePath": "_content/MarketMasked",
+      "RelativePath": "css/image/Carddetaillight.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\image\\Carddetaillight.jpg"
     },
     {
       "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\css\\image\\Cardlightmode.jpg",

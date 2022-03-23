@@ -171,6 +171,7 @@
   </table>
 </div>
 
+
 <div style="position:absolute;top:20px;right:5px;">
   <a class="buttoncrud buttonbleep" href="#section2"><img style="margin-right:5px;margin-bottom:5px;" src="/css/image/Halloffame.png" alt="favorite" width="20" height="20">Hell Fame</a>
 </div>
@@ -188,6 +189,21 @@
 </div>
 <div style="position:absolute;bottom:950px;right:5px;">
   <a class="buttoncrud buttonbleep" href="#section3"><img style="margin-right:5px;margin-bottom:5px;" src="/css/image/star-fill.svg" alt="favorite" width="20" height="20">NFT</a>
+</div>
+
+<div id="content" class="divchat" style="position:absolute;bottom:200px;right:5px;margin-bottom:120px;width:20%;height:300px;overflow-y:auto;overflow-x:hidden;">
+          <h5 align="center" class="chat1"><img src="/css/image/Chat.gif" style="margin-bottom:10px;margin-right:5px;" alt="chat" width="30" height="30">Chat</h5>
+              <img src="/css/image/person-circle.svg" style="margin-left: 10px;margin-right: 5px;"  width="25" height="25">Username :
+              <input type="text" size="13px" id="userInput" />
+              <textarea class="areatext" style="float:left;line-height:16px;box-sizing:border-box;width:80%;outline: 0 !important;background:transparent;
+              overflow: hidden;resize: none;border: 0;" type="text" id="messageInput" placeholder="Type your message here..." autofocus></textarea>
+              <a style="float:right;width:20%;margin-top: 30px;margin-bottom: 30px;" id="sendButton" ><i class="fa fa-paper-plane" aria-hidden="true"></i></a>
+              <ul style="list-style-image:url('/css/image/person-circle.svg');
+              list-style-position: outside;float:left;" id="messagesList"></ul>
+</div>
+
+<div id="toogle" style="position:absolute;bottom:250px;right:5px;">
+<button onmousedown="bleep.play()" class="buttoncrud" id="toggle"><img src="/css/image/Chat.gif" alt="chat" width="40" height="40"></button>
 </div>
 
 @section Scripts {

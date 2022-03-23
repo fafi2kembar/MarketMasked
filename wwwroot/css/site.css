@@ -176,10 +176,11 @@ thead {
 			background-color: rgba(255,255,255,0.3);
 		}
 .tbody td{
-  border:1px solid rgb(0, 0, 0)
+  border:1px solid rgb(0, 0, 0);
+  font-size:12px;
 }
 .theadtab th{
-  border:1px solid rgb(0, 0, 0)
+  border:1px solid rgb(0, 0, 0);
 }
 .divscroll {
   height:450px;
@@ -425,11 +426,36 @@ hr{
   height:530px;
   transition:all 0.4s;
   background-size: cover;
+
 }
-
-
-
-
+.parallax{
+  transform-style: preserve-3d;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2), 0px 0px 50px rgba(0, 0, 0, 0.2);
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  width:500px;
+  padding: 0rem 5rem;
+  margin-left: 30%;
+  border-radius: 30px;
+  background-image: url('/css/image/carddetaillight.jpg');
+  background-size: cover;
+  transition: all 0.4s;
+}
+.dark-mode .parallax{
+  background-image: url('/css/image/carddetaildark.jpg');
+  background-size: cover;
+}
+.parallax p{
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.384);
+  border-radius: 5px;
+  color: white;
+  padding:10px;
+}
+.parallax img{
+  border-radius: 10px;
+}
 .dark-mode .tableprod td{
   background-image:url('/css/image/Carddarkmode.jpg');
   background-size: cover;
@@ -438,6 +464,7 @@ hr{
   font-size: 15px;
   text-align: justify;
   text-justify: inter-word;
+  margin-bottom: 10px;
 }
 .dark-mode .tableprod p{
   color:white;
@@ -761,7 +788,20 @@ animation: animate
   transition: 0.3s;
   font-size: 17px;
 }
-
+.productprice {
+  font-size: 17px;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: right;
+}
+.spanprice{
+  background-color: rgb(255, 217, 0);
+  border-radius: 5px;
+  padding: 10px;
+}
+.dark-mode .productprice{
+  color:rgb(255, 255, 255)
+}
 
 .productharga {
   font-size: 14px;
@@ -803,4 +843,14 @@ animation: animate
 .fa-shopping-cart:hover{
   cursor: pointer;
   color: #fbb72c;
+}
+.fa-paper-plane{
+  background: transparent;
+  box-shadow: none;
+  padding: 0px;
+  margin: 0px;
+  color: rgb(121, 121, 121);
+}
+.fa-paper-plane:hover{
+  cursor: pointer;
 }

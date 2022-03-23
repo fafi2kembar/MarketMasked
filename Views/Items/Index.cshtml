@@ -9,24 +9,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
-<h1 class="h1list" align="center"><img style="margin-right:5px;margin-bottom:5px;" src="/css/image/Store.png" alt="add" width="50" height="50">List Market</h1>
+<h5 class="h1list" align="center" style="font-variant:small-caps;font-weight:bold;"><img style="margin-right:5px;margin-bottom:5px;" src="/css/image/Store.png" alt="add" width="50" height="50">List Market</h1>
 <hr>
 <form asp-controller="Items" asp-action="Index" method="get">
     <p>
-        <a class="buttoncrud" asp-action="Create"><img style="margin-right:5px;margin-bottom:5px;" src="css/image/plus.svg" alt="add" width="20" height="20">CREATE NEW</a>
+        <a class="buttoncrud" asp-action="Create"><img style="margin-right:5px;margin-bottom:5px;" src="css/image/plus.svg" alt="add" width="20" height="20">Create New</a>
         <img style="margin-right:5px;margin-left:5px;" src="css/image/search.svg" alt="search" width="20" height="20"><input type="text" placeholder="Search" value="@ViewData["CurrentFilter"]" name="SearchString" />
-        <input class="buttoncrud" type="submit" value="SEARCH" />
+        <input class="buttoncrud" type="submit" value="Search" />
     </p>
 </form>
 <div style="margin-bottom:250px" class="divscroll">
 <table class="table">
-    <thead class="theadtab" style="border:1px solid black;color:black; text-transform:uppercase">
-        <th style="font-size:18px; letter-spacing:1px;" align="center">NO</th>
-        <th style="font-size:18px; letter-spacing:2px;" align="center">Image</th>
-        <th style="font-size:18px; letter-spacing:2px;" align="center">@Html.DisplayNameFor(model => model.First().Name)</th>
-        <th style="font-size:18px; letter-spacing:2px;" align="center">@Html.DisplayNameFor(model => model.First().Description)</th>
-        <th style="font-size:18px; letter-spacing:2px;" align="center">@Html.DisplayNameFor(model => model.First().Price)</th>
-        <th colspan="3" style="font-size:18px; letter-spacing:2px;" align="center">Action</th>
+    <thead class="theadtab" style="border:1px solid black;color:black; text-transform:capitalize;font-variant:small-caps;">
+        <th style="font-size:14px; letter-spacing:2px;" align="center">NO</th>
+        <th style="font-size:14px; letter-spacing:2px;" align="center">Image</th>
+        <th style="font-size:14px; letter-spacing:2px;" align="center">@Html.DisplayNameFor(model => model.First().Name)</th>
+        <th style="font-size:14px; letter-spacing:2px;" align="center">@Html.DisplayNameFor(model => model.First().Description)</th>
+        <th style="font-size:14px; letter-spacing:2px;" align="center">@Html.DisplayNameFor(model => model.First().Price)</th>
+        <th colspan="3" style="font-size:14px; letter-spacing:2px;" align="center">Action</th>
     </thead>
     <tbody class="tbody">
 @foreach (var item in Model) {
@@ -86,38 +86,38 @@
 </div>
 <div class="divdum">
 <div>
-    <p style="color:black;text-transform:uppercase;font-size:18px;letter-spacing:3px;">Best Seller</p>
+    <p style="color:black;text-transform:uppercase;font-size:16px;letter-spacing:3px;">Best Seller</p>
 </div>
 <div class="slideshowcar">
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">
     <div style="visibility: hidden;" class="numbertext">1 / 6</div>
-    <img src="css/item/C20.jpg" style="width:90%; height:200px;">
+    <img src="css/item/C20.jpg" style="width:90%; height:250px;">
   </div>
 
   <div class="mySlides fade">
     <div style="visibility: hidden;" class="numbertext">2 / 6</div>
-    <img src="css/item/C21.jpg" style="width:90%; height:200px;">
+    <img src="css/item/C21.jpg" style="width:90%; height:250px;">
   </div>
 
   <div class="mySlides fade">
     <div style="visibility: hidden;" class="numbertext">3 / 6</div>
-    <img src="css/item/C22.jpg" style="width:90%; height:200px;">
+    <img src="css/item/C22.jpg" style="width:90%; height:250px;">
   </div>
 
   <div class="mySlides fade">
     <div style="visibility: hidden;" class="numbertext">4 / 6</div>
-    <img src="css/item/.jpg" style="width:90%; height:200px;">
+    <img src="css/item/C23.jpg" style="width:90%; height:250px;">
   </div>
 
   <div class="mySlides fade">
     <div style="visibility: hidden;" class="numbertext">5 / 6</div>
-    <img src="css/item/.jpg" style="width:90%; height:200px;" >
+    <img src="css/item/.jpg" style="width:90%; height:250px;" >
   </div>
   
   <div class="mySlides fade">
     <div style="visibility: hidden;" class="numbertext">6 / 6</div>
-    <img src="css/item/.jpg" style="width:90%; height:200px;" >
+    <img src="css/item/.jpg" style="width:90%; height:250px;" >
   </div>
 
   <div style="margin-top:100px;" class="dotdiv" style="text-align:center">

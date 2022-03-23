@@ -211,13 +211,4 @@ button.accept-policy[b-y3apmw2zuz] {
   background: #2bc026;
   color: rgb(255, 255, 255);
 }
-.fa-paper-plane[b-y3apmw2zuz]{
-  background: transparent;
-  box-shadow: none;
-  padding: 0px;
-  margin: 0px;
-  color: rgb(121, 121, 121);
-}
-.fa-paper-plane:hover[b-y3apmw2zuz]{
-  cursor: pointer;
-}
+

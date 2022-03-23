@@ -5,44 +5,23 @@
 }
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
-<h1>Details</h1>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
-<div>
-    <h4>Item</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Price)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ImageName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ImageName)
-        </dd>
-        <dt class="col-sm-2">
-            Uploaded Image
-        </dt>
-        <dd class="col-sm-10">
-            <img src="@("~/image/"+Model.ImageName)" asp-append-version="true" width="250px" height="250px"/>
-        </dd>
-    </dl>
+
+
+<div style="margin-top:40px;" class="parallax row">
+    <div align="center" class="col-sm-12">
+    <img src="@("~/image/"+Model.ImageName)" asp-append-version="true"  style="width:250px; height:250px;">
+        <span class="productname">Category : Masked</span>
+			  <h5 style="font-variant:small-caps;text-transform:capitalize;font-weight:bolder;letter-spacing:2px;color:white;">
+                  <u>@Html.DisplayFor(model => model.Name)</u></h5>
+			  <p style="font-weight:light;">Description : @Html.DisplayFor(model => model.Description)<br /><br/>
+              Image Name  : @Html.DisplayFor(model => model.ImageName)</p>
+        <hr>
+        <div class="productprice"><span class="spanprice">
+            <img style="margin-right:5px;" src="/css/image/piggy-bank.svg" alt="money" width="20" height="20">
+            Rp.@Html.DisplayFor(model => model.Price)</span></div>
+    </div>
 </div>
 <div style="margin-bottom:150px">
     <a class="buttoncrud" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
@@ -61,6 +40,46 @@
       $( "body" ).addClass( "dark-mode" );
       $( ".change" ).text( "ON" );
     }
-    });
+    }); 
+    
     </script>
+    
 }
+
+<script>
+    
+    //Movement Animation to happen
+    const parallax = document.querySelector(".parallax");
+    const container = document.querySelector(".container");
+    //Items
+    const item = document.querySelector(".parallax img");
+    const category = document.querySelector(".productname");
+    const desc = document.querySelector(".parallax p");
+    const head = document.querySelector(".parallax h5");
+    //Moving Animation Event
+    container.addEventListener("mousemove", (e) => {
+    let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+    let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+    parallax.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    });
+    //Animate In
+    container.addEventListener("mouseenter", (e) => {
+    parallax.style.transition = "none";
+    //Popout
+    item.style.transform = "translateZ(50px)";
+    category.style.transform = "translateZ(50px)";
+    desc.style.transform = "translateZ(50px)";
+    head.style.transform = "translateZ(50px)";
+    });
+    //Animate Out
+    container.addEventListener("mouseleave", (e) => {
+    parallax.style.transition = "all 0.5s ease";
+    parallax.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    //Popback
+    item.style.transform = "translateZ(0px)";
+    category.style.transform = "translateZ(0px)";
+    desc.style.transform = "translateZ(0px)";
+    head.style.transform = "translateZ(0px)";
+    });
+
+</script>

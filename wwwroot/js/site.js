@@ -70,3 +70,40 @@ $(document).ready(function(){
 $("#toggle").on("click", function(){
   $("#content").toggle();                 // .fadeToggle() // .slideToggle()
 });
+
+//Movement Animation to happen
+const parallax = document.querySelector(".parallax");
+//Items
+const item = document.querySelector(".parallax img");
+const category = document.querySelector(".productname");
+const desc = document.querySelector(".parallax p");
+const head = document.querySelector(".parallax h5");
+const price = document.querySelector(".spanprice");
+//Moving Animation Event
+parallax.addEventListener("mousemove", (e) => {
+  let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+  let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+  parallax.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+});
+//Animate In
+parallax.addEventListener("mouseenter", (e) => {
+  parallax.style.transition = "none";
+  //Popout
+  item.style.transform = "translateZ(50px)";
+  category.style.transform = "translateZ(50px)";
+  desc.style.transform = "translateZ(50px)";
+  head.style.transform = "translateZ(50px)";
+  price.style.transform = "translateZ(50px)";
+});
+//Animate Out
+parallax.addEventListener("mouseleave", (e) => {
+  parallax.style.transition = "all 0.5s ease";
+  parallax.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  //Popback
+  item.style.transform = "translateZ(0px)";
+  category.style.transform = "translateZ(0px)";
+  desc.style.transform = "translateZ(0px)";
+  head.style.transform = "translateZ(0px)";
+  price.style.transform = "translateZ(0px)";
+
+});
