@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MarketMasked.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
 </head>
 <body>
 <header>
@@ -22,12 +23,24 @@
         <span class="hamburger-line third"></span>
       </label>
     </div>
-    <div class="item-list">
-      <div class="menutama"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img style="border-radius:5px;" src="/css/image/Logo.gif" alt="home" width="35" height="35"><br/>MASKED</a></div>
-      <div><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/Home.png" style="margin-right: 5px;" alt="home" width="25" height="25">Home</a></div>
-      <div><a class="nav-link text-dark" asp-area="" asp-controller="Items" asp-action="Index"><img src="/css/image/Store.png" style="margin-right: 5px;" alt="item" width="25" height="25">Items</a></div>
-      <div><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"><img src="/css/image/Privacy.png" style="margin-right: 5px;" alt="privacy" width="25" height="25">Secure</a></div>
-    </div>
+      <ul class="menu">
+        <li class="menu_list">
+            <span class="front"><img style="border-radius:5px;" src="/css/image/Logo.gif" alt="home" width="50" height="50"></span>
+            <a style="color: #ffffff;text-decoration:none;" class="side" asp-area="" asp-controller="Home" asp-action="Index">MASKED</a>
+        </li>
+        <li class="menu_list">
+            <span class="front"><img src="/css/image/Home.png" style="margin-right: 5px;" alt="home" width="40" height="40"></span>
+            <a style="color: #ffffff;text-decoration:none;" class="side" asp-area="" asp-controller="Home" asp-action="Index">HOME</a>
+        </li>
+        <li class="menu_list">
+            <span class="front"><img src="/css/image/Store.png" style="margin-right: 5px;" alt="item" width="40" height="40"></span>
+            <a style="color: #ffffff;text-decoration:none;" class="side" asp-area="" asp-controller="Items" asp-action="Index">STORE</a>
+        </li>
+        <li class="menu_list">
+            <span class="front"><img src="/css/image/Privacy.png" style="margin-right: 5px;" alt="privacy" width="40" height="40"></span>
+            <a style="color: #ffffff;text-decoration:none;" class="side" asp-area="" asp-controller="Home" asp-action="Privacy">PRIVACY</a>
+        </li>
+      </ul>
   </label>
 </div>
 </header>

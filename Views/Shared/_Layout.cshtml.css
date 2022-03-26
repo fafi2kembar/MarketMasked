@@ -125,40 +125,42 @@ button.accept-policy {
   position: relative;
   display: inline-block;
 }
-.menu-button-wrapper .item-list {
+.menu-button-wrapper .menu {
   position: absolute;
   top: 90px;
   transform: translateX(-50%) scale(0);
   transform-origin: center;
   transition: all 0.4s cubic-bezier(0.54, -0.1, 0.57, 0.57);
-  background-color: rgba(255, 255, 255, 0.521);
-  color: #fff;
-  width: 105px;
+  background-color: transparent;
   left: 50%;
   padding: 10px 0;
-  text-align: left;
+  text-align: center;
   font-weight: 400;
   opacity: 0;
   user-select: none;
   border-radius:4px 4px;
   
-  
 }
-.menu-button-wrapper .item-list:hover {
-  border-radius: 4px 4px 10% 10%;
+.menu-button-wrapper .menu li:hover {
   box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(0,0,0,.15);
 }
-.menu-button-wrapper .item-list div {
+
+.dark-mode .menu-button-wrapper .menu li:hover {
+  box-shadow: 2.5px 2.5px 2.5px 2.5px rgba(255, 255, 255, 0.15);
+}
+.menu-button-wrapper .menu li {
   padding: 5px 0px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  vertical-align: middle;
+  background-color: #33395e;
+  color: #fff;
 }
-
-.menu-button-wrapper .item-list .menutama {
-  
-  cursor: pointer;
-  text-align: center;
-  
+.dark-mode .menu-button-wrapper .menu li {
+  background-color: #06e2ff;
+  color: #fff;
 }
 
 .menu-button-wrapper .menu-button {
@@ -171,7 +173,7 @@ button.accept-policy {
   cursor: pointer;
 }
 
-.menu-button:checked ~ .item-list {
+.menu-button:checked ~ .menu {
   transform: translateX(-50%) scale(1);
   opacity: 1;
   user-select: auto;
@@ -211,3 +213,47 @@ button.accept-policy {
   color: rgb(255, 255, 255);
 }
 
+ul.menu {
+  list-style-type: none;
+}
+li.menu_list {
+  height: 85px;
+  width: 85px;
+  position: relative;
+}
+li.menu_list .front,
+a.side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 86px;
+  width: 100%;
+  padding: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all .5s ease-out;
+  cursor: pointer;
+}
+li.menu_list .front {
+  background-color: #06e2ff;
+  color: #FFFC00;
+  transform-origin: 0 0;
+}
+.dark-mode li.menu_list .front {
+  background-color: #33395e;
+  color: #FFFC00;
+  transform-origin: 0 0;
+}
+a.side {
+  transform-origin: 0 0 85px;
+  transform: rotateY(-90deg);
+}
+li.menu_list:hover a.side {
+  transform: rotateY(0deg);
+}
+li.menu_list:hover .front {
+  transform: rotateY(90deg);
+}

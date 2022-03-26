@@ -436,7 +436,7 @@ hr{
   justify-content: center;
   width:500px;
   padding: 0rem 5rem;
-  margin-left: 30%;
+  margin:auto;
   border-radius: 30px;
   background-image: url('/css/image/carddetaillight.jpg');
   background-size: cover;
@@ -853,4 +853,176 @@ animation: animate
 }
 .fa-paper-plane:hover{
   cursor: pointer;
+}
+.divcrud{
+  box-shadow: 2.5px 2.5px 10px rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-variant: small-caps;
+  margin: auto;
+  background-image: url('/css/image/Createlightmode.jpg');
+  background-size: cover;
+  border: 1px solid transparent;
+  -webkit-animation: glow 0.4s infinite alternate;  
+   -webkit-transition: border 0.4s linear, box-shadow 0.4s linear;
+     -moz-transition: border 0.4s linear, box-shadow 0.4s linear;
+          transition: border 0.4s linear, box-shadow 0.4s linear;
+
+}
+.dark-mode .divcrud{
+  background-image: url('/css/image/Createdarkmode.jpg');
+  background-size: cover;
+  box-shadow: 2.5px 2.5px 10px rgb(255, 255, 255);
+}
+
+@-webkit-keyframes glow {
+  to {
+       border-color: #00eeff;
+  -webkit-box-shadow: 2.5px 2.5px 10px #00eeff;
+     -moz-box-shadow: 2.5px 2.5px 10px #00eeff;
+          box-shadow: 2.5px 2.5px 10px #00eeff;
+  }
+}
+.buttoncool {
+	padding: 10px;
+	cursor: pointer;
+	font-size: 14px;
+  font-weight: lighter;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+	color: rgb(255, 255, 255);
+	background: rgb(255, 145, 0);
+	border: 1px solid rgb(255, 145, 0);
+	box-shadow: 5px 5px 0 rgb(255, 145, 0),
+		-5px -5px 0 rgb(255, 145, 0),
+		-5px 5px 0 rgb(255, 145, 0),
+		5px -5px 0 rgb(255, 145, 0);
+	transition: 500ms ease-in-out;
+}
+
+.buttoncool:hover {
+	box-shadow: 20px 5px 0 rgb(255, 145, 0), -20px -5px 0 rgb(255, 145, 0);
+}
+.dark-mode .buttoncool{
+  background: rgb(255, 0, 85);
+	border: 1px solid rgb(255, 0, 85);
+	box-shadow: 5px 5px 0 rgb(255, 0, 85),
+		-5px -5px 0 rgb(255, 0, 85),
+		-5px 5px 0 rgb(255, 0, 85),
+		5px -5px 0 rgb(255, 0, 85);
+	transition: 500ms ease-in-out;
+}
+.dark-mode .buttoncool:hover {
+	box-shadow: 20px 5px 0 rgb(255, 0, 85), -20px -5px 0 rgb(255, 0, 85);
+}
+.buttoncool:focus {
+	outline: none;
+}
+.textdivcool2{
+  background: rgb(0, 238, 255);
+	border: 1px solid rgb(0, 238, 255);
+  box-shadow: 20px 5px 0 rgb(0, 238, 255), -20px -5px 0 rgb(0, 238, 255);
+  transition: all 500ms;
+}
+.dark-mode .textdivcool2{
+  background-color: #0077ff;
+}
+.textdivcool2:hover {
+	box-shadow: 20px 5px 0 rgb(255, 136, 0), -20px -5px 0 rgb(9, 255, 0);
+}
+
+.cardcool{
+  border: 1px solid rgba(0, 238, 255, 0);
+	box-shadow: 5px 5px 0 rgb(0, 183, 255),
+		-5px -5px 0 rgb(0, 238, 255),
+		-5px 5px 0 rgb(0, 238, 255),
+		5px -5px 0 rgb(0, 238, 255);
+	transition: 500ms ease-in-out;
+  background-color: #00eeff;
+}
+
+.cardcool:hover {
+	box-shadow: 20px 5px 0 rgb(203, 252, 255), -20px -5px 0 rgb(0, 183, 255);
+}
+.dark-mode .cardcool:hover {
+	box-shadow: 20px 5px 0 rgb(203, 252, 255), -20px -5px 0 rgb(0, 183, 255);
+}
+.dark-mode .cardcool{
+  background-color: #0077ff;
+  box-shadow: 5px 5px 0 rgb(0, 132, 184),
+		-5px -5px 0 rgb(0, 238, 255),
+		-5px 5px 0 rgb(0, 238, 255),
+		5px -5px 0 rgb(0, 238, 255);
+    transition: 500ms ease-in-out;
+}
+.divcreate{
+  background-color: transparent;
+  border-radius: 5px;
+  color: black;
+  padding:10px;
+  transition: all 0.4s;
+}
+.dark-mode .divcreate{
+  color: white;
+}
+.divimage{
+  background-color: rgba(255, 174, 0, 0.384);
+  color:white;
+  transition: all 0.4s;
+  border-radius: 10px;
+  padding: 10px;
+}
+.divimage:hover{
+  background-color: rgba(0, 140, 255, 0.384);
+}
+.dark-mode .divimage:hover{
+  background-color: rgba(255, 0, 221, 0.384);
+}
+.divcreate:hover{
+  background-color: rgba(0, 0, 0, 0.384);
+  border-radius: 5px;
+  color: white;
+  padding:10px;
+}
+.form-cool {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  outline: 0;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  padding: 7px 0;
+  background: rgba(126, 126, 126, 0.514);
+  transition: all 0.2s;
+}
+.dark-mode .form-cool{
+  color: rgb(255, 255, 255);
+}
+.dark-mode .form-cool:focus{
+  color: #7bff00;  
+  border-image: linear-gradient(to right, #ea00ff,#ff0080);
+  border-image-slice: 1;
+}
+.form-cool::placeholder {
+    color: white;
+}
+.form-cool:placeholder-shown {
+    font-size: 15px;
+    cursor: text;
+    top: 20px;
+}
+.form-cool:focus {
+  transition: 0.2s;
+  font-size: 12px;
+  color: #7bff00;  
+  border-image: linear-gradient(to right, #00eeff,#ffc400);
+  border-image-slice: 1;
+  }
+.form-image{
+  font-size: 12px;
+  color: #7bff00;
+  width: 100%; 
 }
