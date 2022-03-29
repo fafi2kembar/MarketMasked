@@ -113,7 +113,7 @@ body {
   counter-increment: serial-number;  /* Increment the serial number counter */
   content: counter(serial-number);
 }
-td {
+.table td {
 	padding: 10px;
 	background-color: rgba(50, 56, 90, 0.521);
 	color: rgb(0, 0, 0);
@@ -147,7 +147,6 @@ td {
 	background-color: rgba(50, 56, 90, 0.521);
 	color: rgb(0, 0, 0);
   border: 0px;
-  text-align: center;
 }
 .tdcentericon {
 	padding: 10px;
@@ -177,6 +176,7 @@ thead {
 		}
 .tbody td{
   border:1px solid rgb(0, 0, 0);
+  background-color: transparent;
   font-size:12px;
 }
 .theadtab th{
@@ -854,6 +854,36 @@ animation: animate
 .fa-paper-plane:hover{
   cursor: pointer;
 }
+.divedit{
+  box-shadow: 2.5px 2.5px 10px rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-variant: small-caps;
+  margin: auto;
+  background-image: url('/css/image/Editlightmode.jpg');
+  background-size: cover;
+  border: 1px solid transparent;
+  -webkit-animation: glowing 0.4s infinite alternate;  
+   -webkit-transition: border 0.4s linear, box-shadow 0.4s linear;
+     -moz-transition: border 0.4s linear, box-shadow 0.4s linear;
+          transition: border 0.4s linear, box-shadow 0.4s linear;
+
+}
+.dark-mode .divedit{
+  background-image: url('/css/image/Editdarkmode.jpg');
+  background-size: cover;
+  box-shadow: 2.5px 2.5px 10px rgb(255, 255, 255);
+}
+@-webkit-keyframes glowing {
+  to {
+       border-color: #ffa600;
+  -webkit-box-shadow: 2.5px 2.5px 10px #ffa600;
+     -moz-box-shadow: 2.5px 2.5px 10px #ffa600;
+          box-shadow: 2.5px 2.5px 10px #ffa600;
+  }
+}
 .divcrud{
   box-shadow: 2.5px 2.5px 10px rgb(0, 0, 0);
   border-radius: 10px;
@@ -920,18 +950,6 @@ animation: animate
 .buttoncool:focus {
 	outline: none;
 }
-.textdivcool2{
-  background: rgb(0, 238, 255);
-	border: 1px solid rgb(0, 238, 255);
-  box-shadow: 20px 5px 0 rgb(0, 238, 255), -20px -5px 0 rgb(0, 238, 255);
-  transition: all 500ms;
-}
-.dark-mode .textdivcool2{
-  background-color: #0077ff;
-}
-.textdivcool2:hover {
-	box-shadow: 20px 5px 0 rgb(255, 136, 0), -20px -5px 0 rgb(9, 255, 0);
-}
 
 .cardcool{
   border: 1px solid rgba(0, 238, 255, 0);
@@ -947,14 +965,14 @@ animation: animate
 	box-shadow: 20px 5px 0 rgb(203, 252, 255), -20px -5px 0 rgb(0, 183, 255);
 }
 .dark-mode .cardcool:hover {
-	box-shadow: 20px 5px 0 rgb(203, 252, 255), -20px -5px 0 rgb(0, 183, 255);
+	box-shadow: 20px 5px 0 rgb(225, 1, 255), -20px -5px 0 rgb(255, 0, 128)
 }
 .dark-mode .cardcool{
-  background-color: #0077ff;
-  box-shadow: 5px 5px 0 rgb(0, 132, 184),
-		-5px -5px 0 rgb(0, 238, 255),
-		-5px 5px 0 rgb(0, 238, 255),
-		5px -5px 0 rgb(0, 238, 255);
+  background-color: #c000b6;
+  box-shadow: 5px 5px 0 rgb(255, 0, 255),
+		-5px -5px 0 rgb(255, 0, 179),
+		-5px 5px 0 rgb(255, 0, 179),
+		5px -5px 0 rgb(255, 0, 179);
     transition: 500ms ease-in-out;
 }
 .divcreate{
@@ -1025,4 +1043,126 @@ animation: animate
   font-size: 12px;
   color: #7bff00;
   width: 100%; 
+}
+.tababout{
+  background-color: transparent; 
+  border-spacing: 20px;
+  border-collapse: separate;
+}
+.tababout td{
+  padding: 40px;
+  
+}
+
+.foto{
+  margin-top: 20px;
+  transition: all 0.4s;
+}
+.parallax2{
+  transform-style: preserve-3d;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  width:500px;
+  padding: 0rem 5rem;
+  margin:auto;
+  border-radius: 30px;
+  background-image: url('/css/image/Deletelightmode.jpg');
+  background-size: cover;
+  transition: all 0.4s;
+}
+.parallax2:hover{
+  background-image: url('/css/image/Deletelightmode.gif');
+  background-size: cover;
+}
+.dark-mode .parallax2{
+  background-image: url('/css/image/Deletedarkmode.jpg');
+  background-size: cover;
+}
+.dark-mode .parallax2:hover{
+  background-image: url('/css/image/Deletedarkmode.gif');
+  background-size: cover;
+}
+.parallax2 p{
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.384);
+  border-radius: 5px;
+  color: white;
+  padding:10px;
+}
+.parallax2 img{
+  border-radius: 10px;
+  margin-top:50px;
+}
+
+.crack{
+  filter: blur(0.007em);
+  animation: shake 2.5s linear infinite;
+}
+
+
+@keyframes shake {
+  5%, 15%, 25%, 35%, 55%, 65%, 75%, 95% {
+      filter: blur(0.018em);
+      transform: translateY(0.025em) rotate(0deg);
+  }
+
+  10%, 30%, 40%, 50%, 70%, 80%, 90% {
+      filter: blur(0.01em);
+      transform: translateY(-0.025em) rotate(0deg);
+  }
+
+  20%, 60% {
+      filter: blur(0.03em);
+      transform: translate(-0.025em, 0.025em) rotate(0deg);
+  }
+
+  45%, 85% {
+      filter: blur(0.03em);
+      transform: translate(0.025em, -0.025em) rotate(0deg);
+  }
+
+  100% {
+      filter: blur(0.007em);
+      transform: translate(0) rotate(-0.5deg);
+  }
+}
+
+.buttondel {
+	padding: 10px;
+	cursor: pointer;
+	font-size: 14px;
+  font-weight: lighter;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+	color: rgb(255, 255, 255);
+	background: rgb(255, 0, 85);
+	border: 1px solid rgb(255, 0, 85);
+	box-shadow: 5px 5px 0 rgb(255, 0, 85),
+		-5px -5px 0 rgb(255, 0, 85),
+		-5px 5px 0 rgb(255, 0, 85),
+		5px -5px 0 rgb(255, 0, 85);
+	transition: 500ms ease-in-out;
+  filter: blur(0.007em);
+  animation: shake 2.5s linear infinite;
+  
+}
+
+.buttondel:hover {
+	box-shadow: 20px 5px 0 rgb(255, 0, 85), -20px -5px 0 rgb(255, 0, 85);
+}
+.dark-mode .buttondel{
+  background: rgb(255, 0, 85);
+	border: 1px solid rgb(255, 0, 85);
+	box-shadow: 5px 5px 0 rgb(255, 0, 85),
+		-5px -5px 0 rgb(255, 0, 85),
+		-5px 5px 0 rgb(255, 0, 85),
+		5px -5px 0 rgb(255, 0, 85);
+	transition: 500ms ease-in-out;
+}
+.dark-mode .buttondel:hover {
+	box-shadow: 20px 5px 0 rgb(255, 0, 85), -20px -5px 0 rgb(255, 0, 85);
+}
+.buttondel:focus {
+	outline: none;
 }

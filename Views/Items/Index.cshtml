@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <h5 class="h1list" align="center" style="font-variant:small-caps;font-weight:bold;"><img style="margin-right:5px;margin-bottom:5px;" src="/css/image/Store.png" alt="add" width="50" height="50">List Market</h1>
 <hr>
 <form asp-controller="Items" asp-action="Index" method="get">
@@ -49,13 +50,13 @@
                 <br />
             </td>
             <td class="tdcenter" >
-                <a asp-action="Edit" asp-route-id="@item.Id"><img src="/css/image/Edit.png" alt="edit" width="40" height="40"></a> 
+                <p align="center"><a asp-action="Edit" asp-route-id="@item.Id"><img src="/css/image/Edit.png" alt="edit" width="30" height="30"></a></p> 
             </td>
             <td class="tdcentericon" >    
-                <a asp-action="Details" asp-route-id="@item.Id"><img src="/css/image/Detail.png" alt="detail" width="40" height="40"></a> 
+                <p align="center"><a asp-action="Details" asp-route-id="@item.Id"><img src="/css/image/Detail.png" alt="detail" width="30" height="30"></a></p> 
             </td>
             <td class="tdcenter" >    
-                <a asp-action="Delete" asp-route-id="@item.Id"><img src="css/image/Delete.png" alt="delete" width="40" height="40"></a>
+                <p align="center"><a asp-action="Delete" asp-route-id="@item.Id"><img src="css/image/Delete.png" alt="delete" width="30" height="30"></a></p>
             </td>
         </tr>
         

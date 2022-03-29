@@ -6,46 +6,43 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
-<h1>Edit</h1>
 
-<h4>Item</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-            <div class="form-group">
+<h4 style="visibility:hidden;margin-top:20px;margin-bottom:20px;">Item</h4>
+<form asp-action="Edit" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="Id" />
+        <div style="width:500px;height:600px" class="divedit row">
+            <div class="divimage col-md-6">
                 <label>Current Image</label><br />
-                <p align="center"><img src="@("~/image/"+Model.ImageName)" asp-append-version="true" width="200px" height="200px" alt="" /></p>
+                <p align="center"><img style="border-radius:10px;margin-top:23px;" src="@("~/image/"+Model.ImageName)" asp-append-version="true" width="150px" height="150px" alt="" /></p>
             </div>
-            <div class="form-group">
+            <div class="divimage col-md-6">
                 <label asp-for="ImageFile" class="control-label"></label><br />
-                <input asp-for="ImageFile" accept="image/*" />
-                <p align="center"><img src="" id="imgpreview" alt="" /></p>
+                <input asp-for="ImageFile" accept="image/*" class="form-image"/>
+                <p align="center"><img style="border-radius:10px;" src="" id="imgpreview" alt="" /></p>
                 <span asp-validation-for="ImageFile" class="text-danger"></span>
             </div>
-            <div align="center" class="form-group">
-                <input class="buttoncrud" type="submit" value="Save" class="btn btn-primary" />
+            <div class="divcreate col-md-6">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-cool" />
+                <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-        </form>
-    </div>
-</div>
+            <div class="divcreate col-md-6">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-cool" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="divcreate form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-cool" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div align="center" class="form-group">
+                <input class="buttoncool" type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </div>
+</form>
+    
 
 <div style="margin-bottom: 150px;">
     <a class="buttoncrud" asp-action="Index">Back to List</a>
