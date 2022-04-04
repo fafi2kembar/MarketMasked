@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+ek4KvM6SoZ+RpPdxZq4OovnOmUCLKQR3AfJwpZXqLc=",
+  "Hash": "CiaI3N+jOGFtgS5zQ+GC/MK1KXRwH9OZAO7ixzIiIjw=",
   "Source": "MarketMasked",
   "BasePath": "_content/MarketMasked",
   "Mode": "Default",
@@ -29614,6 +29614,23 @@
       "OriginalItemSpec": "wwwroot\\Image\\C1221929686.jpg"
     },
     {
+      "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\Image\\C1222027995.jpg",
+      "SourceId": "MarketMasked",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\",
+      "BasePath": "_content/MarketMasked",
+      "RelativePath": "Image/C1222027995.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Image\\C1222027995.jpg"
+    },
+    {
       "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\Image\\C1224624203.jpg",
       "SourceId": "MarketMasked",
       "SourceType": "Discovered",
@@ -29629,23 +29646,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Image\\C1224624203.jpg"
-    },
-    {
-      "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\Image\\C1225946427.jpg",
-      "SourceId": "MarketMasked",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\",
-      "BasePath": "_content/MarketMasked",
-      "RelativePath": "Image/C1225946427.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Image\\C1225946427.jpg"
     },
     {
       "Identity": "D:\\Project\\LearnASP.NET\\MarketMasked\\wwwroot\\Image\\C20222704976.jpg",

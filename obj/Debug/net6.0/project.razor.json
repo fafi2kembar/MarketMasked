@@ -16377,6 +16377,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Project\\LearnASP.NET\\MarketMasked\\Views\\Nft\\Create.cshtml",
+      "TargetPath": "Views\\Nft\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Project\\LearnASP.NET\\MarketMasked\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -16397,6 +16402,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Project\\LearnASP.NET\\MarketMasked\\Views\\Nft\\Delete.cshtml",
+      "TargetPath": "Views\\Nft\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Project\\LearnASP.NET\\MarketMasked\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
@@ -16412,8 +16422,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Project\\LearnASP.NET\\MarketMasked\\Views\\Nft\\Details.cshtml",
+      "TargetPath": "Views\\Nft\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Project\\LearnASP.NET\\MarketMasked\\Views\\Items\\Details.cshtml",
       "TargetPath": "Views\\Items\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Project\\LearnASP.NET\\MarketMasked\\Views\\Nft\\Edit.cshtml",
+      "TargetPath": "Views\\Nft\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16429,6 +16449,11 @@
     {
       "FilePath": "d:\\Project\\LearnASP.NET\\MarketMasked\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Project\\LearnASP.NET\\MarketMasked\\Views\\Nft\\Index.cshtml",
+      "TargetPath": "Views\\Nft\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

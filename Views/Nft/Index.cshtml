@@ -1,0 +1,92 @@
+@model PaginatedList<MarketMasked.Models.Nft>
+@using PagedList.Mvc;
+@using PagedList;
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h5 class="h1list" align="center" style="font-variant:small-caps;font-weight:bold;">
+    >NFT Market</h5>
+<form asp-controller="Nft" asp-action="Index" method="get">
+    <p>
+        <a class="buttoncrud" asp-action="Create"><img style="margin-right:5px;margin-bottom:5px;" src="css/image/plus.svg" alt="add" width="20" height="20">Create New</a>
+        <img style="margin-right:5px;margin-left:5px;" src="css/image/search.svg" alt="search" width="20" height="20"><input type="text" placeholder="Search" value="@ViewData["CurrentFilter"]" name="SearchString" />
+        <input class="buttoncrud" type="submit" value="Search" />
+    </p>
+</form>
+<table class="tablenft">
+    <thead class="theadtab">
+        <tr>
+            <th>
+                Image
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Description)
+            </th>
+            <th colspan="3">
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="tdcenter" >
+                <img style="border-radius:10px;border:1px solid black;" src="@("~/image/"+item.ImageName)" asp-append-version="true" width="50px" height="50px"/>
+                <br />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+            <td>
+                <p align="center"><a asp-action="Edit" asp-route-id="@item.Id"><img src="/css/image/Edit.png" alt="edit" width="30" height="30"></a></p> 
+            </td>
+            <td>    
+                <p align="center"><a asp-action="Details" asp-route-id="@item.Id"><img src="/css/image/Detail.png" alt="detail" width="30" height="30"></a></p> 
+            </td>
+            <td>    
+                <p align="center"><a asp-action="Delete" asp-route-id="@item.Id"><img src="css/image/Delete.png" alt="delete" width="30" height="30"></a></p>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@{
+    var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisabled = !Model.HasNextPage ? "disabled" : "";
+}
+
+<a class="buttoncrud" asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex - 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @prevDisabled">
+    Previous
+</a>
+<a class="buttoncrud" asp-action="Index"
+   asp-route-sortOrder="@ViewData["CurrentSort"]"
+   asp-route-pageNumber="@(Model.PageIndex + 1)"
+   asp-route-currentFilter="@ViewData["CurrentFilter"]"
+   class="btn btn-default @nextDisabled">
+    Next
+</a>
+
+<div class="toggledark nftlink" style="position:absolute;top:10px;right:5px;padding:10px">
+  <a style="text-decoration:none;" asp-area="" asp-controller="Item" asp-action="Index"><img style="margin-right:5px;margin-bottom:5px;" src="/css/image/Halloffame.png" alt="favorite" width="20" height="20">Masked Market</a>
+</div>

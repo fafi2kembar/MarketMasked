@@ -5,6 +5,16 @@ using MarketMasked.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+if (builder.Environment.IsDevelopment())
+{
+builder.Services.AddDbContext<MarketMaskedNftContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("MarketMaskedNftContext")));
+}
+{
+    builder.Services.AddDbContext<MarketMaskedNftContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("ProductionMarketMaskedNftContext")));
+}
+
 builder.Services.AddSignalR();
 
 builder.Services.AddCors(options =>

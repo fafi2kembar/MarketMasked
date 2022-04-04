@@ -303,3 +303,4 @@ D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.Extensions.Featu
 D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\System.IO.Pipelines.dll
 D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\libman.json
+D:\Project\LearnASP.NET\MarketMasked\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll

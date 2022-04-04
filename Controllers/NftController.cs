@@ -16,37 +16,34 @@ using PagedList;
 using PagedList.Mvc;
 using MarketMasked.Models; 
 
-
 namespace MarketMasked.Controllers
 {
-    public class ItemsController : Controller
+    public class NftController : Controller
     {
-        private readonly MarketMaskedContext _context;
+        private readonly MarketMaskedNftContext _context;
 
         private readonly IWebHostEnvironment _hostEnvironment;
-
-        public ItemsController(MarketMaskedContext context, IWebHostEnvironment hostEnvironment)
+        public NftController(MarketMaskedNftContext context, IWebHostEnvironment hostEnvironment)
         {
             _context = context;
             this._hostEnvironment = hostEnvironment;
         }
 
-
-        // GET: Items
+        // GET: Nft
         public async Task<IActionResult> Index(string sortOrder, string searchString, string currentFilter, int? pageNumber)
         {
             ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["CurrentFilter"] = searchString;
-            var items = from m in _context.Item
+            var nft = from m in _context.Nft
                  select m;
             switch (sortOrder)
             {
                 case "name_desc":
-                    items = items.OrderByDescending(s => s.Name);
+                    nft = nft.OrderByDescending(s => s.Name);
                     break;
                 default:
-                    items = items.OrderBy(s => s.Name);
+                    nft = nft.OrderBy(s => s.Name);
                     break;
             }
             if (searchString != null)
@@ -60,13 +57,13 @@ namespace MarketMasked.Controllers
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                items = items.Where(s => s.Name!.Contains(searchString));
+                nft = nft.Where(s => s.Name!.Contains(searchString));
             }
             int pageSize = 5;
-            return View(await PaginatedList<Item>.CreateAsync(items.AsNoTracking(), pageNumber ?? 1, pageSize));
+            return View(await PaginatedList<Nft>.CreateAsync(nft.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
-        // GET: Items/Details/5
+        // GET: Nft/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -74,51 +71,50 @@ namespace MarketMasked.Controllers
                 return NotFound();
             }
 
-            var item = await _context.Item
+            var nft = await _context.Nft
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (item == null)
+            if (nft == null)
             {
                 return NotFound();
             }
 
-            return View(item);
+            return View(nft);
         }
 
-        // GET: Items/Create
+        // GET: Nft/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Items/Create
+        // POST: Nft/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,Price,ImageFile")] Item item)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,ImageFile")] Nft nft)
         {
             if (ModelState.IsValid)
             {
                 //Save image to wwwroot/image
                 string wwwRootPath = _hostEnvironment.WebRootPath;
-                string fileName = Path.GetFileNameWithoutExtension(item.ImageFile.FileName);
-                string extension = Path.GetExtension(item.ImageFile.FileName);
-                item.ImageName=fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
-                string path = Path.Combine(wwwRootPath + "/Image/", fileName);
+                string fileName = Path.GetFileNameWithoutExtension(nft.ImageFile.FileName);
+                string extension = Path.GetExtension(nft.ImageFile.FileName);
+                nft.ImageName=fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                string path = Path.Combine(wwwRootPath + "/Nftstore/", fileName);
                 using (var fileStream = new FileStream(path,FileMode.Create))
                 {
-                    await item.ImageFile.CopyToAsync(fileStream);
+                    await nft.ImageFile.CopyToAsync(fileStream);
                 }
 
-                _context.Add(item);
+                _context.Add(nft);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-            
             }
-            return View(item);
+            return View(nft);
         }
 
-        // GET: Items/Edit/5
+        // GET: Nft/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -126,22 +122,22 @@ namespace MarketMasked.Controllers
                 return NotFound();
             }
 
-            var item = await _context.Item.FindAsync(id);
-            if (item == null)
+            var nft = await _context.Nft.FindAsync(id);
+            if (nft == null)
             {
                 return NotFound();
             }
-            return View(item);
+            return View(nft);
         }
 
-        // POST: Items/Edit/5
+        // POST: Nft/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Price,ImageFile")] Item item)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description")] Nft nft)
         {
-            if (id != item.Id)
+            if (id != nft.Id)
             {
                 return NotFound();
             }
@@ -152,22 +148,22 @@ namespace MarketMasked.Controllers
                 {
                      //Save image to wwwroot/image
                     string wwwRootPath = _hostEnvironment.WebRootPath;
-                    string v = Path.GetFileNameWithoutExtension(item.ImageFile.FileName);
+                    string v = Path.GetFileNameWithoutExtension(nft.ImageFile.FileName);
                     string fileName = v;
-                    string extension = Path.GetExtension(item.ImageFile.FileName);
-                    item.ImageName=fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
-                    string path = Path.Combine(wwwRootPath + "/Image/", fileName);
+                    string extension = Path.GetExtension(nft.ImageFile.FileName);
+                    nft.ImageName=fileName = fileName + DateTime.Now.ToString("yymmssfff") + extension;
+                    string path = Path.Combine(wwwRootPath + "/Nftstore/", fileName);
                     using (var fileStream = new FileStream(path,FileMode.Create))
                     {
-                        await item.ImageFile.CopyToAsync(fileStream);
+                        await nft.ImageFile.CopyToAsync(fileStream);
                     }
 
-                    _context.Update(item);
+                    _context.Update(nft);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ItemExists(item.Id))
+                    if (!NftExists(nft.Id))
                     {
                         return NotFound();
                     }
@@ -178,10 +174,10 @@ namespace MarketMasked.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(item);
+            return View(nft);
         }
 
-        // GET: Items/Delete/5
+        // GET: Nft/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -189,35 +185,35 @@ namespace MarketMasked.Controllers
                 return NotFound();
             }
 
-            var item = await _context.Item
+            var nft = await _context.Nft
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (item == null)
+            if (nft == null)
             {
                 return NotFound();
             }
 
-            return View(item);
+            return View(nft);
         }
 
-        // POST: Items/Delete/5
+        // POST: Nft/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var item = await _context.Item.FindAsync(id);
+            var nft = await _context.Nft.FindAsync(id);
             //delete image from wwwroot/image
-            var imagePath = Path.Combine(_hostEnvironment.WebRootPath,"image",item.ImageName);
+            var imagePath = Path.Combine(_hostEnvironment.WebRootPath,"nftstore",nft.ImageName);
             if (System.IO.File.Exists(imagePath))
             System.IO.File.Delete(imagePath);
             //delete the record
-            _context.Item.Remove(item);
+            _context.Nft.Remove(nft);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ItemExists(int id)
+        private bool NftExists(int id)
         {
-            return _context.Item.Any(e => e.Id == id);
+            return _context.Nft.Any(e => e.Id == id);
         }
     }
 }
