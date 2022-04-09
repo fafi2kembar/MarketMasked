@@ -3,28 +3,79 @@
 @{
     ViewData["Title"] = "Details";
 }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<h1>Details</h1>
+<div style="margin-top:40px;" class="parallax row">
+    <div align="center" class="col-sm-12">
+    <img src="@("~/nftstore/"+Model.ImageName)" asp-append-version="true"  style="width:250px; height:250px;">
+        <span class="productname">Category : NFT</span>
+			  <h5 style="font-variant:small-caps;text-transform:capitalize;font-weight:bolder;letter-spacing:2px;color:white;">
+                  <u>@Html.DisplayFor(model => model.Name)</u></h5>
+			  <p style="font-weight:light;">Description : @Html.DisplayFor(model => model.Description)
+              <h5 style="margin-top:30px;" class="hedbutton"><a href="" class="fa fa-shopping-cart">Buy</a></h5>
+    </div>
+</div>
 
-<div>
-    <h4>Nft</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-    </dl>
+<div style="margin-bottom:150px">
+    <a class="buttoncrud" asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a class="buttoncrud" asp-action="Index">Back to List</a>
 </div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+
+    $( ".change" ).on("click", function() {
+    if( $( "body" ).hasClass( "dark-mode" )) {
+      $( "body" ).removeClass( "dark-mode" );
+      $( ".change" ).text( "OFF" );
+    } else {
+      $( "body" ).addClass( "dark-mode" );
+      $( ".change" ).text( "ON" );
+    }
+    }); 
+    
+    </script>
+    
+}
+
+<script>
+    
+    //Movement Animation to happen
+    const parallax = document.querySelector(".parallax");
+    const container = document.querySelector(".container");
+    //Items
+    const item = document.querySelector(".parallax img");
+    const category = document.querySelector(".productname");
+    const desc = document.querySelector(".parallax p");
+    const head = document.querySelector(".parallax h5");
+    //Moving Animation Event
+    container.addEventListener("mousemove", (e) => {
+    let xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+    let yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+    parallax.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    });
+    //Animate In
+    container.addEventListener("mouseenter", (e) => {
+    parallax.style.transition = "none";
+    //Popout
+    item.style.transform = "translateZ(50px)";
+    category.style.transform = "translateZ(50px)";
+    desc.style.transform = "translateZ(50px)";
+    head.style.transform = "translateZ(50px)";
+    });
+    //Animate Out
+    container.addEventListener("mouseleave", (e) => {
+    parallax.style.transition = "all 0.5s ease";
+    parallax.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    //Popback
+    item.style.transform = "translateZ(0px)";
+    category.style.transform = "translateZ(0px)";
+    desc.style.transform = "translateZ(0px)";
+    head.style.transform = "translateZ(0px)";
+    });
+
+</script>

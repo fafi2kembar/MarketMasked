@@ -257,3 +257,49 @@ li.menu_list:hover a.side {
 li.menu_list:hover .front {
   transform: rotateY(90deg);
 }
+
+
+.navMenu .dot {
+  margin-top: 50px;
+  width: 6px;
+  height: 6px;
+  background: #fddb3a;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(-420px) translateY(20px);
+  transform: translateX(-420px) translateY(20px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(-420px) translateY(20px);
+  transform: translateX(-420px) translateY(20px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(-310px) translateY(20px);
+  transform: translateX(-310px) translateY(20px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(-195) translateY(20px);
+  transform: translateX(-195px) translateY(20px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(-75px) translateY(20px);
+  transform: translateX(-75px) translateY(20px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}

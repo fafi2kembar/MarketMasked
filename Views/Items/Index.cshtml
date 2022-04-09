@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<h5 class="h1list" align="center" style="font-variant:small-caps;font-weight:bold;">
+<h5 class="h1list crack" align="center" style="font-variant:small-caps;font-weight:bold;">
     <img style="margin-right:5px;margin-bottom:5px;" src="/css/image/Store.png" alt="add" width="50" height="50">Masked Market</h5>
 <form asp-controller="Items" asp-action="Index" method="get">
     <p>
@@ -37,7 +37,7 @@
                 <img style="border-radius:10px;border:1px solid black;" src="@("~/image/"+item.ImageName)" asp-append-version="true" width="50px" height="50px"/>
                 <br />
             </td>
-            <td>
+            <td style="text-transform: capitalize;">
                 @Html.DisplayFor(modelItem => item.Name)
                 <br />
             </td>

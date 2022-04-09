@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Merriweather:wght@300&display=swap');
 
 html {
   font-size: 14px;
@@ -104,43 +105,7 @@ body {
 }
 
 
-.table {
-	border-collapse: collapse;
-	box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  counter-reset: serial-number;
-  transition: all 0.4s;
-}
-.dark-mode .table{
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.315);
-}
-.table td:first-child:before {
-  counter-increment: serial-number;  /* Increment the serial number counter */
-  content: counter(serial-number);
-}
-.table td {
-	padding: 10px;
-	background-color: rgba(50, 56, 90, 0.521);
-	color: rgb(0, 0, 0);
-  text-align: left;
-  letter-spacing: 2px;
-  text-transform: capitalize;
-  transition: all 0.4s;
-}
-.dark-mode .table td{
-  color:white;
-}
-.table tr:nth-of-type(odd) {
-		background:#00d9ff;
-}
-.dark-mode .table tr:nth-of-type(odd) {
-  background:#a300a8;
-}
-.table tr:nth-of-type(even) {
-  background:#ff7300;
-}
-.dark-mode .table tr:nth-of-type(even) {
-  background:#af0052;
-}
+
 .tdfoll{
   background-color: transparent;
   text-align: center;
@@ -194,6 +159,15 @@ thead {
 .theadtab th{
   background-color:whitesmoke;
   font-weight: lighter;
+}
+.theadtab {
+  border: 1px solid whitesmoke;
+}
+.tablenft .headnft{
+  border: 1px solid whitesmoke;
+}
+.dark-mode .headnft{
+  border:1px solid rgb(153, 153, 153);
 }
 .theadtab a{
   color: black;
@@ -1220,4 +1194,112 @@ animation: animate
 }
 .tablenft{
   width:100%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  transition: all 0.4s;
+  counter-reset: serial-number;
+}
+.dark-mode .tablenft{
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.315);
+}
+.tablenft tr:nth-of-type(odd) {
+  background:#ffffff;
+}
+.dark-mode .tablenft tr:nth-of-type(odd) {
+  background:#000000;
+}
+.tablenft tr:nth-of-type(even) {
+  background:rgb(253, 253, 253);
+}
+.dark-mode .tablenft tr:nth-of-type(even) {
+  background:#535253;
+}
+.tablenft .headnft th{
+  font-weight: 100;
+  font-variant: small-caps;
+  background-color: whitesmoke;
+  padding:10px;
+}
+.dark-mode .tablenft .headnft th{
+  font-weight: 100;
+  font-variant: small-caps;
+  background-color: rgb(153, 153, 153);
+}
+.headnft th a{
+  text-decoration: none;
+  color:black;
+  transition: all 0.4s;
+}
+.dark-mode .headnft th a{
+  color:rgb(255, 255, 255);
+}
+.tablenft td{
+  font-size: 13px;
+  border: 1px solid whitesmoke;
+  padding:10px;
+  transition: all 0.4s;
+}
+.dark-mode .tablenft td{
+  border: 1px solid rgb(71, 71, 71);
+}
+.tablenft .headnft{
+  border: 1px solid whitesmoke;
+}
+.dark-mode .headnft{
+  border:1px solid rgb(153, 153, 153);
+}
+
+.table {
+	border-collapse: collapse;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  counter-reset: serial-number;
+  transition: all 0.4s;
+}
+.dark-mode .table{
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.315);
+}
+.table td:first-child:before {
+  counter-increment: serial-number;  /* Increment the serial number counter */
+  content: counter(serial-number);
+}
+.tablenft td:first-child:before {
+  counter-increment: serial-number;  /* Increment the serial number counter */
+  content: counter(serial-number);
+}
+.table td {
+	padding: 10px;
+	color: rgb(0, 0, 0);
+  text-align: left;
+  transition: all 0.4s;
+  border: 1px solid whitesmoke;
+}
+.dark-mode .table td{
+  color:white;
+  border: 1px solid rgb(71, 71, 71);
+}
+.table tr:nth-of-type(odd) {
+  background:#ffffff;
+}
+.dark-mode .table tr:nth-of-type(odd) {
+  background:#000000;
+}
+.table tr:nth-of-type(even) {
+  background:rgb(253, 253, 253);
+}
+.dark-mode .table tr:nth-of-type(even) {
+  background:#535253;
+}
+.footertable td{
+  text-align:center;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif; 
+}
+.navMenu a {
+  color: rgb(141, 141, 141);
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: #fddb3a;
 }

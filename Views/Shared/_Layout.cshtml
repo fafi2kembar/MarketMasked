@@ -60,33 +60,33 @@ Dark Mode<br/><button onmousedown="bleep.play()" class="change buttontogled">OFF
     <footer style="margin-top:40px" class="border-top bg-dark footer text-muted">
         <div class="container">
             <div class="footericon" align="center">
-              <table style="width:100%;height:100%;">
+              <table class="footertable" style="width:100%;height:100%;">
       <tr>
-        <td style="color:white;border-right:1px solid white" class="tdfoll">
-          Contact Us :
+        <td style="border-right:1px solid white" >
               <a href="#" class="fa fa-facebook"></a>
               <a href="#" class="fa fa-twitter"></a>
               <a href="#" class="fa fa-instagram"></a>
               <a href="#" class="fa fa-whatsapp"></a>
               <a href="#" class="fa fa-youtube"></a>
         </td>
-        <td style="color:white;border-right:1px solid white" class="tdfoll">
-          <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Home" asp-action="About"> About Us</a>
-        </td>
-        <td class="tdfoll">
-              <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/Home.png" style="margin-right: 5px;" alt="home" width="40" height="40">|Home</a>
-              <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Items" asp-action="Index"><img src="/css/image/Store.png" style="margin-right: 5px;" alt="item" width="40" height="40">|Items</a>
-              <a style="margin:10px;text-decoration: none;" class="text-light" asp-area="" asp-controller="Home" asp-action="Privacy"><img src="/css/image/Privacy.png" style="margin-right: 5px;" alt="privacy" width="40" height="40">|Secure</a>
+        <td>
+          <nav class="navMenu">
+              <a class="blade" style="margin:10px;text-decoration: none;" asp-area="" asp-controller="Home" asp-action="Index"><img src="/css/image/Home.png" style="margin-right: 5px;" alt="home" width="40" height="40">|Home</a>
+              <a class="blade" style="margin:10px;text-decoration: none;" asp-area="" asp-controller="Items" asp-action="Index"><img src="/css/image/Store.png" style="margin-right: 5px;" alt="item" width="40" height="40">|Items</a>
+              <a class="blade" style="margin:10px;text-decoration: none;" asp-area="" asp-controller="Home" asp-action="Privacy"><img src="/css/image/Privacy.png" style="margin-right: 5px;" alt="privacy" width="40" height="40">|Secure</a>
+              <a class="blade" style="margin:10px;text-decoration: none;" asp-area="" asp-controller="Home" asp-action="About"><img src="/css/image/Privacy.png" style="margin-right: 5px;" alt="privacy" width="40" height="40">|About Us</a>
+          <div class="dot"></div>
+          </nav>
         </td>
       </tr>
     </table>
     </div>
             <hr />
-            <div style="float:left;width:20%;letter-spacing:2px;">
+            <div style="float:left;width:20%;letter-spacing:2px;font-size:12px;">
             &copy; 2022 - MarketMasked - <a style="text-decoration:none;" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             </div>
             <div style="float:right;width:60%;letter-spacing:2px;text-align:right;">
-              <h1 style="font-weight:bold;font-variant:small-caps;font-family:'VT323';font-size:45px;"><img style="border-radius:10px;margin-right:5px;margin-bottom:5px;" src="/css/image/Logo.gif" alt="home" width="35" height="35">MASKED-EGO</h1></div>
+              <h1  class="crack" style="font-weight:bold;font-variant:small-caps;font-family:'VT323';font-size:45px;"><img style="border-radius:10px;margin-right:5px;margin-bottom:5px;" src="/css/image/Logo.gif" alt="home" width="35" height="35">MASKED-EGO</h1></div>
             </div>
     </div>
     </footer>

@@ -3,36 +3,62 @@
 @{
     ViewData["Title"] = "Create";
 }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<h1>Create</h1>
-
-<h4>Nft</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+<h4 align="center" style="visibility:hidden;color:grey;margin-top:20px;margin-bottom:20px;letter-spacing:2px;font-variant:small-caps;"><l>Create</l></h4>
+<form asp-action="Create" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div style="width:500px;height:600px" class="divcrud row">
+            <div align="center" class="divlogimg form-group">
+            <img src="/css/image/CreateIcon.gif" alt="favorite" width="100" height="100">
+            </div>
+            <div class="divimage form-group">
+                <label class="control-label">Upload Image</label><br />
+                <input asp-for="ImageFile" accept="nftstore/*" class="form-image"/>
+                <p align="center"><img style="border-radius:10px;" src="" id="imgpreview" alt="" /></p>
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            <div class="divcreate form-group">
                 <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
+                <input asp-for="Name" class="form-cool" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="divcreate form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <input asp-for="Description" class="form-cool" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+            <div align="center" class="form-group">
+                <input type="submit" value="Create" class="buttoncool" />
+            </div>
+        </div>
+</form>
+
+<div style="margin-bottom:150px">
+    <a class="buttoncrud" asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $("#ImageFile").change(function(){
+        readURL(this);
+    })
+
+    $( ".change" ).on("click", function() {
+    if( $( "body" ).hasClass( "dark-mode" )) {
+      $( "body" ).removeClass( "dark-mode" );
+      $( ".change" ).text( "OFF" );
+    } else {
+      $( "body" ).addClass( "dark-mode" );
+      $( ".change" ).text( "ON" );
+    }
+    });
+
+    </script>
 }
